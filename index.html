@@ -46,29 +46,53 @@
         body::before {
             content: '';
             position: fixed;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
+            top: -80%;
+            left: -80%;
+            width: 260%;
+            height: 260%;
             background:
-                radial-gradient(circle at 20% 30%, rgba(92, 163, 255, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.12) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 90% 20%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
-            animation: moveBackground 20s ease-in-out infinite;
+                /* Lite tier - Green (5 orbs) */
+                radial-gradient(ellipse 700px 550px at 15% 25%, rgba(16, 185, 129, 0.32) 0%, rgba(16, 185, 129, 0.16) 30%, transparent 70%),
+                radial-gradient(ellipse 600px 500px at 45% 75%, rgba(16, 185, 129, 0.25) 0%, rgba(16, 185, 129, 0.12) 30%, transparent 70%),
+                radial-gradient(ellipse 550px 480px at 70% 40%, rgba(16, 185, 129, 0.28) 0%, rgba(16, 185, 129, 0.14) 30%, transparent 70%),
+                radial-gradient(ellipse 480px 520px at 30% 55%, rgba(16, 185, 129, 0.24) 0%, rgba(16, 185, 129, 0.11) 30%, transparent 70%),
+                radial-gradient(ellipse 520px 450px at 60% 90%, rgba(16, 185, 129, 0.26) 0%, rgba(16, 185, 129, 0.13) 30%, transparent 70%),
+
+                /* Pro tier - Blue (5 orbs) */
+                radial-gradient(ellipse 800px 650px at 75% 65%, rgba(92, 163, 255, 0.35) 0%, rgba(92, 163, 255, 0.18) 30%, transparent 70%),
+                radial-gradient(ellipse 650px 600px at 25% 85%, rgba(92, 163, 255, 0.28) 0%, rgba(92, 163, 255, 0.14) 30%, transparent 70%),
+                radial-gradient(ellipse 580px 550px at 50% 35%, rgba(92, 163, 255, 0.3) 0%, rgba(92, 163, 255, 0.15) 30%, transparent 70%),
+                radial-gradient(ellipse 620px 580px at 10% 60%, rgba(92, 163, 255, 0.26) 0%, rgba(92, 163, 255, 0.13) 30%, transparent 70%),
+                radial-gradient(ellipse 550px 600px at 85% 45%, rgba(92, 163, 255, 0.29) 0%, rgba(92, 163, 255, 0.14) 30%, transparent 70%),
+
+                /* Ultimate tier - Purple (5 orbs) */
+                radial-gradient(ellipse 750px 700px at 85% 15%, rgba(168, 85, 247, 0.3) 0%, rgba(168, 85, 247, 0.15) 30%, transparent 70%),
+                radial-gradient(ellipse 550px 650px at 90% 50%, rgba(168, 85, 247, 0.26) 0%, rgba(168, 85, 247, 0.13) 30%, transparent 70%),
+                radial-gradient(ellipse 600px 580px at 35% 20%, rgba(168, 85, 247, 0.28) 0%, rgba(168, 85, 247, 0.14) 30%, transparent 70%),
+                radial-gradient(ellipse 520px 600px at 65% 78%, rgba(168, 85, 247, 0.25) 0%, rgba(168, 85, 247, 0.12) 30%, transparent 70%),
+                radial-gradient(ellipse 580px 540px at 18% 48%, rgba(168, 85, 247, 0.27) 0%, rgba(168, 85, 247, 0.13) 30%, transparent 70%),
+
+                /* Accent - Orange (2 orbs) */
+                radial-gradient(ellipse 500px 550px at 55% 10%, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0.1) 30%, transparent 70%),
+                radial-gradient(ellipse 480px 520px at 42% 62%, rgba(245, 158, 11, 0.2) 0%, rgba(245, 158, 11, 0.09) 30%, transparent 70%);
+            animation: moveBackground 35s ease-in-out infinite;
             z-index: 0;
             pointer-events: none;
+            filter: blur(40px);
         }
 
         @keyframes moveBackground {
             0%, 100% {
-                transform: translate(0, 0) rotate(0deg);
+                transform: translate(0, 0) rotate(0deg) scale(1);
             }
-            33% {
-                transform: translate(5%, -5%) rotate(120deg);
+            25% {
+                transform: translate(6%, -8%) rotate(90deg) scale(1.05);
             }
-            66% {
-                transform: translate(-5%, 5%) rotate(240deg);
+            50% {
+                transform: translate(8%, 5%) rotate(180deg) scale(1.08);
+            }
+            75% {
+                transform: translate(-7%, 6%) rotate(270deg) scale(1.04);
             }
         }
 
@@ -424,9 +448,10 @@
         .features-grid {
             max-width: 1400px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             gap: 2rem;
+            justify-content: center;
         }
 
         .feature-card {
@@ -438,6 +463,7 @@
             backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
+            flex: 0 1 350px;
         }
 
         .feature-card::before {
@@ -460,6 +486,42 @@
 
         .feature-card:hover::before {
             transform: scaleX(1);
+        }
+
+        /* Privacy Card Glow Effect */
+        .feature-card.privacy-glow {
+            border: 2px solid rgba(92, 163, 255, 0.5);
+            box-shadow:
+                0 0 20px rgba(92, 163, 255, 0.3),
+                0 0 40px rgba(92, 163, 255, 0.2),
+                0 0 60px rgba(92, 163, 255, 0.1),
+                inset 0 0 20px rgba(92, 163, 255, 0.05);
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow:
+                    0 0 20px rgba(92, 163, 255, 0.3),
+                    0 0 40px rgba(92, 163, 255, 0.2),
+                    0 0 60px rgba(92, 163, 255, 0.1),
+                    inset 0 0 20px rgba(92, 163, 255, 0.05);
+            }
+            50% {
+                box-shadow:
+                    0 0 30px rgba(92, 163, 255, 0.5),
+                    0 0 60px rgba(92, 163, 255, 0.3),
+                    0 0 90px rgba(92, 163, 255, 0.2),
+                    inset 0 0 30px rgba(92, 163, 255, 0.1);
+            }
+        }
+
+        .feature-card.privacy-glow:hover {
+            box-shadow:
+                0 0 30px rgba(92, 163, 255, 0.5),
+                0 0 60px rgba(92, 163, 255, 0.4),
+                0 0 90px rgba(92, 163, 255, 0.3),
+                0 20px 60px rgba(92, 163, 255, 0.3);
         }
 
         .feature-icon {
@@ -507,6 +569,7 @@
             color: rgba(255, 255, 255, 0.7);
             line-height: 1.8;
             text-align: center;
+            direction: ltr;
         }
 
         .feature-description .secondary-lang {
@@ -1060,7 +1123,9 @@
             <img src="BRIEFIK بريفك.svg" alt="BRIEFIK Logo" class="logo-nav">
             <div class="nav-links">
                 <a href="#features" class="nav-link">Features | المميزات</a>
-                <a href="#pricing" class="nav-link">Pricing | الأسعار</a>
+                <a href="pricing.html" class="nav-link">Pricing | الأسعار</a>
+                <a href="privacy.html" class="nav-link">Privacy | الخصوصية</a>
+                <a href="terms.html" class="nav-link">Terms | الشروط</a>
                 <a href="#download" class="cta-button">Download | تحميل</a>
             </div>
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
@@ -1225,6 +1290,26 @@
                     التصدير إلى PDF أو Word أو نص عادي. دعم كامل للكتابة من اليمين لليسار للوثائق العربية.
                     <span class="secondary-lang">
                     Export to PDF, Word, or text format. Full RTL support for Arabic documents.
+                    </span>
+                </p>
+            </div>
+
+            <div class="feature-card privacy-glow reveal">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">
+                    الخصوصية أولاً
+                    <span class="subtitle">Privacy First</span>
+                </h3>
+                <p class="feature-description">
+                    <span style="display: block; direction: rtl; text-align: center;">
+                    نحن ملتزمون بحماية خصوصيتك. بمجرد معالجة الجلسة، يتم حذف جميع التسجيلات تلقائياً من جهازك. لا نحتفظ بأي بيانات صوتية على خوادمنا.
+                    </span>
+                    <span class="secondary-lang">
+                    We're committed to protecting your privacy. Once a session is processed, all recordings are automatically deleted from your device. We don't store any audio data on our servers.
                     </span>
                 </p>
             </div>

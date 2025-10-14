@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - BRIEFIK | شروط الخدمة - بريفك</title>
+    <meta name="description" content="BRIEFIK Terms of Service - Usage rights, subscription terms, and legal agreements.">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/codec-pro">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #5ca3ff;
+            --primary-light: #7db8ff;
+            --primary-dark: #3d8aed;
+            --black: #000000;
+            --dark-bg: #0a0a0b;
+            --card-bg: #121214;
+        }
+
+        body {
+            font-family: 'Codec Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--black);
+            color: white;
+            overflow-x: hidden;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        * {
+            unicode-bidi: plaintext;
+        }
+
+        /* Animated Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -80%;
+            left: -80%;
+            width: 260%;
+            height: 260%;
+            background:
+                /* Lite tier - Green (5 orbs) */
+                radial-gradient(ellipse 700px 550px at 15% 25%, rgba(16, 185, 129, 0.32) 0%, rgba(16, 185, 129, 0.16) 30%, transparent 70%),
+                radial-gradient(ellipse 600px 500px at 45% 75%, rgba(16, 185, 129, 0.25) 0%, rgba(16, 185, 129, 0.12) 30%, transparent 70%),
+                radial-gradient(ellipse 550px 480px at 70% 40%, rgba(16, 185, 129, 0.28) 0%, rgba(16, 185, 129, 0.14) 30%, transparent 70%),
+                radial-gradient(ellipse 480px 520px at 30% 55%, rgba(16, 185, 129, 0.24) 0%, rgba(16, 185, 129, 0.11) 30%, transparent 70%),
+                radial-gradient(ellipse 520px 450px at 60% 90%, rgba(16, 185, 129, 0.26) 0%, rgba(16, 185, 129, 0.13) 30%, transparent 70%),
+
+                /* Pro tier - Blue (5 orbs) */
+                radial-gradient(ellipse 800px 650px at 75% 65%, rgba(92, 163, 255, 0.35) 0%, rgba(92, 163, 255, 0.18) 30%, transparent 70%),
+                radial-gradient(ellipse 650px 600px at 25% 85%, rgba(92, 163, 255, 0.28) 0%, rgba(92, 163, 255, 0.14) 30%, transparent 70%),
+                radial-gradient(ellipse 580px 550px at 50% 35%, rgba(92, 163, 255, 0.3) 0%, rgba(92, 163, 255, 0.15) 30%, transparent 70%),
+                radial-gradient(ellipse 620px 580px at 10% 60%, rgba(92, 163, 255, 0.26) 0%, rgba(92, 163, 255, 0.13) 30%, transparent 70%),
+                radial-gradient(ellipse 550px 600px at 85% 45%, rgba(92, 163, 255, 0.29) 0%, rgba(92, 163, 255, 0.14) 30%, transparent 70%),
+
+                /* Ultimate tier - Purple (5 orbs) */
+                radial-gradient(ellipse 750px 700px at 85% 15%, rgba(168, 85, 247, 0.3) 0%, rgba(168, 85, 247, 0.15) 30%, transparent 70%),
+                radial-gradient(ellipse 550px 650px at 90% 50%, rgba(168, 85, 247, 0.26) 0%, rgba(168, 85, 247, 0.13) 30%, transparent 70%),
+                radial-gradient(ellipse 600px 580px at 35% 20%, rgba(168, 85, 247, 0.28) 0%, rgba(168, 85, 247, 0.14) 30%, transparent 70%),
+                radial-gradient(ellipse 520px 600px at 65% 78%, rgba(168, 85, 247, 0.25) 0%, rgba(168, 85, 247, 0.12) 30%, transparent 70%),
+                radial-gradient(ellipse 580px 540px at 18% 48%, rgba(168, 85, 247, 0.27) 0%, rgba(168, 85, 247, 0.13) 30%, transparent 70%),
+
+                /* Accent - Orange (2 orbs) */
+                radial-gradient(ellipse 500px 550px at 55% 10%, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0.1) 30%, transparent 70%),
+                radial-gradient(ellipse 480px 520px at 42% 62%, rgba(245, 158, 11, 0.2) 0%, rgba(245, 158, 11, 0.09) 30%, transparent 70%);
+            animation: moveBackground 35s ease-in-out infinite;
+            z-index: 0;
+            pointer-events: none;
+            filter: blur(40px);
+        }
+
+        @keyframes moveBackground {
+            0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+            25% { transform: translate(6%, -8%) rotate(90deg) scale(1.05); }
+            50% { transform: translate(8%, 5%) rotate(180deg) scale(1.08); }
+            75% { transform: translate(-7%, 6%) rotate(270deg) scale(1.04); }
+        }
+
+        nav, section, footer {
+            position: relative;
+            z-index: 1;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 11, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(92, 163, 255, 0.1);
+            padding: 1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-nav {
+            height: 35px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 15px;
+        }
+
+        .nav-link:hover {
+            color: white;
+        }
+
+        .cta-button {
+            padding: 12px 28px;
+            background: linear-gradient(135deg, rgba(92, 163, 255, 0.9), rgba(125, 184, 255, 0.9));
+            border-radius: 12px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(92, 163, 255, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(92, 163, 255, 0.4);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 150px 2rem 80px;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .subtitle {
+            display: block;
+            font-size: 0.75em;
+            opacity: 0.9;
+            margin-top: 0.8rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Content Section */
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 2rem 100px;
+        }
+
+        .terms-box {
+            background: rgba(18, 18, 20, 0.6);
+            border: 1px solid rgba(92, 163, 255, 0.2);
+            border-radius: 24px;
+            padding: 3rem;
+            backdrop-filter: blur(10px);
+            margin-bottom: 2rem;
+        }
+
+        .terms-box h2 {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-light);
+        }
+
+        .terms-box h2 .subtitle {
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .terms-box h3 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .terms-box p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            align-items: start;
+        }
+
+        .arabic-column {
+            text-align: right;
+            direction: rtl;
+        }
+
+        .english-column {
+            text-align: left;
+            direction: ltr;
+        }
+
+        .arabic-column h3, .english-column h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .arabic-column h3:not(:first-child), .english-column h3:not(:first-child) {
+            margin-top: 2rem;
+        }
+
+        .arabic-column p, .english-column p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .arabic-column ul, .english-column ul {
+            list-style: none;
+            margin: 1.5rem 0;
+            padding: 0;
+        }
+
+        .arabic-column ul li {
+            padding: 0.8rem 0;
+            color: rgba(255, 255, 255, 0.8);
+            position: relative;
+            line-height: 1.7;
+            padding-right: 1.5rem;
+        }
+
+        .arabic-column ul li::before {
+            content: '•';
+            color: var(--primary-light);
+            font-size: 1.5rem;
+            position: absolute;
+            right: 0;
+        }
+
+        .english-column ul li {
+            padding: 0.8rem 0;
+            color: rgba(255, 255, 255, 0.8);
+            position: relative;
+            line-height: 1.7;
+            padding-left: 1.5rem;
+        }
+
+        .english-column ul li::before {
+            content: '•';
+            color: var(--primary-light);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+        }
+
+        .definitions-box {
+            background: linear-gradient(135deg, rgba(92, 163, 255, 0.1), rgba(125, 184, 255, 0.05));
+            border: 2px solid rgba(92, 163, 255, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .definitions-box h3 {
+            margin-top: 0 !important;
+        }
+
+        .warning-box {
+            background: rgba(18, 18, 20, 0.6);
+            border: 2px solid rgba(92, 163, 255, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .warning-box .two-column {
+            margin-top: 1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(92, 163, 255, 0.15), rgba(125, 184, 255, 0.1));
+            border: 2px solid rgba(92, 163, 255, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box .two-column {
+            margin-top: 1rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.95rem;
+            margin-top: 3rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(10, 10, 11, 0.9);
+            border-top: 1px solid rgba(92, 163, 255, 0.1);
+            padding: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--primary-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .terms-box {
+                padding: 2rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .arabic-column {
+                border-right: none;
+                padding-right: 0;
+                border-bottom: 2px solid rgba(92, 163, 255, 0.3);
+                padding-bottom: 2rem;
+            }
+
+            .english-column {
+                border-left: none;
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <img src="BRIEFIK بريفك.svg" alt="BRIEFIK Logo" class="logo-nav">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home | الرئيسية</a>
+                <a href="pricing.html" class="nav-link">Pricing | الأسعار</a>
+                <a href="privacy.html" class="nav-link">Privacy | الخصوصية</a>
+                <a href="terms.html" class="nav-link">Terms | الشروط</a>
+                <a href="index.html#download" class="cta-button">Download | تحميل</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                شروط الخدمة
+                <span class="subtitle">Terms of Service</span>
+            </h1>
+            <p style="direction: rtl; text-align: center;">
+                يرجى قراءة هذه الشروط بعناية قبل استخدام بريفك
+            </p>
+            <p style="direction: ltr; text-align: center; margin-top: 0.5rem; font-size: 1rem; opacity: 0.8;">
+                Please read these terms carefully before using BRIEFIK
+            </p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="content-section">
+        <div class="terms-box">
+            <h2 style="text-align: center; margin-bottom: 2rem;">
+                شروط الخدمة
+                <span class="subtitle">Terms of Service</span>
+            </h2>
+
+            <div class="definitions-box">
+                <div class="two-column">
+                    <div class="english-column">
+                        <h3>Definitions</h3>
+                        <p><strong>"BRIEFIK,"</strong> <strong>"we,"</strong> <strong>"us,"</strong> or <strong>"our"</strong> refers to BRIEFIK, the service provider.</p>
+                        <p><strong>"User,"</strong> <strong>"you,"</strong> or <strong>"Customer"</strong> refers to the individual or entity using our services.</p>
+                    </div>
+                    <div class="arabic-column">
+                        <h3>التعريفات</h3>
+                        <p><strong>"بريفك"</strong> أو <strong>"نحن"</strong> تشير إلى بريفك، مزود الخدمة.</p>
+                        <p><strong>"المستخدم"</strong> أو <strong>"أنت"</strong> أو <strong>"العميل"</strong> تشير إلى الشخص أو الكيان الذي يستخدم خدماتنا.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>1. Agreement to Terms</h3>
+                    <p>By using BRIEFIK, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the App.</p>
+                </div>
+                <div class="arabic-column">
+                    <h3>١. الموافقة على الشروط</h3>
+                    <p>باستخدام بريفك، فإنك توافق على الالتزام بشروط الخدمة هذه. إذا كنت لا توافق على هذه الشروط، يرجى عدم استخدام التطبيق.</p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>2. Service Purpose and User Responsibility</h3>
+                </div>
+                <div class="arabic-column">
+                    <h3>٢. غرض الخدمة ومسؤولية المستخدم</h3>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>2.1 Service Purpose:</strong></p>
+                    <p>BRIEFIK is a SUMMARY and TRANSCRIPTION tool designed to help users summarize and organize content from their meetings, lectures, classes, and courses. BRIEFIK is NOT a recording tool. Users must use their own recording equipment or applications to record audio.</p>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>٢.١ غرض الخدمة:</strong></p>
+                    <p>بريفك هو أداة للتلخيص والنسخ مصممة لمساعدة المستخدمين على تلخيص وتنظيم المحتوى من اجتماعاتهم ومحاضراتهم ودروسهم ودوراتهم. بريفك ليس أداة تسجيل. يجب على المستخدمين استخدام معدات أو تطبيقات التسجيل الخاصة بهم لتسجيل الصوت.</p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>2.2 User Responsibility for Recordings:</strong></p>
+                    <p><strong>YOU ARE SOLELY AND ENTIRELY RESPONSIBLE FOR:</strong></p>
+                    <ul>
+                        <li>Recording any audio using your own recording devices or applications</li>
+                        <li>Obtaining all necessary consents and permissions BEFORE recording any person, meeting, class, lecture, or course</li>
+                        <li>Complying with ALL applicable laws regarding audio recording in your jurisdiction</li>
+                        <li>Determining whether one-party or two-party (or all-party) consent is required in your location</li>
+                        <li>Ensuring you have legal authority to record and process the audio you submit to BRIEFIK</li>
+                        <li>Any legal consequences arising from your recordings or failure to obtain proper consent</li>
+                    </ul>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>٢.٢ مسؤولية المستخدم عن التسجيلات:</strong></p>
+                    <p><strong>أنت مسؤول بالكامل وحصرياً عن:</strong></p>
+                    <ul>
+                        <li>تسجيل أي صوت باستخدام أجهزة أو تطبيقات التسجيل الخاصة بك</li>
+                        <li>الحصول على جميع الموافقات والأذونات اللازمة قبل تسجيل أي شخص أو اجتماع أو فصل أو محاضرة أو دورة</li>
+                        <li>الامتثال لجميع القوانين المعمول بها فيما يتعلق بتسجيل الصوت في منطقتك</li>
+                        <li>تحديد ما إذا كانت موافقة طرف واحد أو طرفين (أو جميع الأطراف) مطلوبة في موقعك</li>
+                        <li>التأكد من أن لديك السلطة القانونية لتسجيل ومعالجة الصوت الذي ترسله إلى بريفك</li>
+                        <li>أي عواقب قانونية ناشئة عن تسجيلاتك أو فشلك في الحصول على الموافقة المناسبة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>2.3 No Liability for User Actions:</strong></p>
+                    <p><strong>WE ARE NOT LIABLE FOR:</strong></p>
+                    <ul>
+                        <li>How you use the Service or any recordings you process</li>
+                        <li>Your failure to obtain required recording consents</li>
+                        <li>Any violations of privacy laws, recording laws, or other regulations</li>
+                        <li>Any legal claims arising from your recordings or use of transcripts/summaries</li>
+                        <li>Any damages, losses, or consequences resulting from your use of the Service</li>
+                        <li>The content, accuracy, or legality of any audio you submit for processing</li>
+                    </ul>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>٢.٣ عدم المسؤولية عن إجراءات المستخدم:</strong></p>
+                    <p><strong>نحن لسنا مسؤولين عن:</strong></p>
+                    <ul>
+                        <li>كيفية استخدامك للخدمة أو أي تسجيلات تقوم بمعالجتها</li>
+                        <li>فشلك في الحصول على موافقات التسجيل المطلوبة</li>
+                        <li>أي انتهاكات لقوانين الخصوصية أو قوانين التسجيل أو اللوائح الأخرى</li>
+                        <li>أي مطالبات قانونية ناشئة عن تسجيلاتك أو استخدام النصوص/الملخصات</li>
+                        <li>أي أضرار أو خسائر أو عواقب ناتجة عن استخدامك للخدمة</li>
+                        <li>محتوى أو دقة أو قانونية أي صوت ترسله للمعالجة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>2.4 Intended Use:</strong></p>
+                    <p>The Service is intended solely for legitimate purposes such as:</p>
+                    <ul>
+                        <li>Summarizing your own meetings with proper consent from participants</li>
+                        <li>Taking notes from lectures and classes you are authorized to record</li>
+                        <li>Organizing educational course content with appropriate permissions</li>
+                        <li>Creating personal study materials from authorized recordings</li>
+                    </ul>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>٢.٤ الاستخدام المقصود:</strong></p>
+                    <p>الخدمة مخصصة فقط للأغراض المشروعة مثل:</p>
+                    <ul>
+                        <li>تلخيص اجتماعاتك الخاصة مع الحصول على موافقة مناسبة من المشاركين</li>
+                        <li>تدوين ملاحظات من المحاضرات والدروس المصرح لك بتسجيلها</li>
+                        <li>تنظيم محتوى الدورة التعليمية مع الأذونات المناسبة</li>
+                        <li>إنشاء مواد دراسية شخصية من التسجيلات المصرح بها</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>2.5 Prohibited Uses:</strong></p>
+                    <p>You may NOT use the Service to:</p>
+                    <ul>
+                        <li>Record or process audio without required consent from all necessary parties</li>
+                        <li>Record confidential, private, or sensitive conversations without authorization</li>
+                        <li>Violate any person's privacy, intellectual property, or other legal rights</li>
+                        <li>Engage in surveillance or monitoring without proper legal authority</li>
+                        <li>Process illegal content or content obtained illegally</li>
+                    </ul>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>٢.٥ الاستخدامات المحظورة:</strong></p>
+                    <p>لا يجوز لك استخدام الخدمة من أجل:</p>
+                    <ul>
+                        <li>تسجيل أو معالجة الصوت دون موافقة مطلوبة من جميع الأطراف الضرورية</li>
+                        <li>تسجيل محادثات سرية أو خاصة أو حساسة دون إذن</li>
+                        <li>انتهاك خصوصية أي شخص أو ملكيته الفكرية أو حقوقه القانونية الأخرى</li>
+                        <li>الانخراط في المراقبة أو الرصد دون سلطة قانونية مناسبة</li>
+                        <li>معالجة محتوى غير قانوني أو محتوى تم الحصول عليه بشكل غير قانوني</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>BY USING THIS SERVICE, YOU ACKNOWLEDGE AND AGREE THAT YOU BEAR FULL RESPONSIBILITY FOR YOUR RECORDINGS AND THEIR LEGALITY. WE PROVIDE ONLY THE SUMMARIZATION TECHNOLOGY - YOU PROVIDE AND ARE RESPONSIBLE FOR THE RECORDINGS.</strong></p>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>باستخدام هذه الخدمة، فإنك تقر وتوافق على أنك تتحمل المسؤولية الكاملة عن تسجيلاتك وقانونيتها. نحن نوفر فقط تقنية التلخيص - أنت توفر وتتحمل مسؤولية التسجيلات.</strong></p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>3. License and Usage</h3>
+                </div>
+                <div class="arabic-column">
+                    <h3>٣. الترخيص والاستخدام</h3>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>License Grant:</strong></p>
+                    <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use BRIEFIK for your personal or business purposes in accordance with these Terms and your subscription plan.</p>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>منح الترخيص:</strong></p>
+                    <p>نمنحك ترخيصاً محدوداً وغير حصري وغير قابل للتحويل وقابل للإلغاء لاستخدام بريفك لأغراضك الشخصية أو التجارية وفقاً لهذه الشروط وخطة اشتراكك.</p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>Usage Restrictions:</strong></p>
+                    <ul>
+                        <li>You may not copy, modify, or distribute the App</li>
+                        <li>You may not reverse engineer or decompile the App</li>
+                        <li>You may not use the App for illegal purposes</li>
+                        <li>You may not share a single account among multiple users</li>
+                        <li>You may not use the App in a way that violates others' rights</li>
+                    </ul>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>قيود الاستخدام:</strong></p>
+                    <ul>
+                        <li>لا يجوز لك نسخ أو تعديل أو توزيع التطبيق</li>
+                        <li>لا يجوز لك إجراء هندسة عكسية أو فك تجميع التطبيق</li>
+                        <li>لا يجوز لك استخدام التطبيق لأغراض غير قانونية</li>
+                        <li>لا يجوز لك مشاركة حساب واحد بين عدة مستخدمين</li>
+                        <li>لا يجوز لك استخدام التطبيق بطريقة تنتهك حقوق الآخرين</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>4. Subscriptions and Payments</h3>
+                </div>
+                <div class="arabic-column">
+                    <h3>٤. الاشتراكات والمدفوعات</h3>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>Subscription Plans:</strong></p>
+                    <p>BRIEFIK offers several subscription plans (Free, Lite, Pro, Ultimate). Each plan has different usage limits and features as outlined on the pricing page.</p>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>خطط الاشتراك:</strong></p>
+                    <p>يقدم بريفك عدة خطط اشتراك (مجاني، لايت، برو، ألتميت). كل خطة لها حدود استخدام وميزات مختلفة موضحة في صفحة الأسعار.</p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>Payment:</strong></p>
+                    <ul>
+                        <li>Subscription fees are charged upfront for the chosen period (monthly or annually)</li>
+                        <li>All prices are in Saudi Riyal (SAR)</li>
+                        <li>Payment is via secure license keys</li>
+                        <li>You must provide accurate and up-to-date payment information</li>
+                    </ul>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>الدفع:</strong></p>
+                    <ul>
+                        <li>يتم تحصيل رسوم الاشتراك مقدماً للفترة المختارة (شهرياً أو سنوياً)</li>
+                        <li>جميع الأسعار بالريال السعودي (SAR)</li>
+                        <li>يتم الدفع عبر مفاتيح الترخيص الآمنة</li>
+                        <li>يجب عليك تقديم معلومات دفع صحيحة ومحدثة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <p style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.8rem; text-align: center;">
+                    سياسة عدم الاسترداد | NO REFUND POLICY
+                </p>
+                <div class="two-column">
+                    <div class="english-column">
+                        <p style="font-weight: 500;">All payments are final and non-refundable. We do not offer refunds on paid subscriptions.</p>
+                    </div>
+                    <div class="arabic-column">
+                        <p style="font-weight: 500;">جميع المدفوعات نهائية وغير قابلة للاسترداد. لا نقدم استرداد أموال على الاشتراكات المدفوعة.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>5. Cancellation and Renewal</h3>
+                </div>
+                <div class="arabic-column">
+                    <h3>٥. الإلغاء والتجديد</h3>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>Cancellation:</strong></p>
+                    <p>You may cancel your subscription at any time through the App settings or by contacting customer support. Upon cancellation:</p>
+                    <ul>
+                        <li>Your subscription will continue until the end of the paid period</li>
+                        <li>You will retain full access until the expiration date</li>
+                        <li>You will not be charged for the next period</li>
+                        <li>No prepaid fees will be refunded</li>
+                    </ul>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>الإلغاء:</strong></p>
+                    <p>يمكنك إلغاء اشتراكك في أي وقت من خلال إعدادات التطبيق أو عن طريق الاتصال بدعم العملاء. عند الإلغاء:</p>
+                    <ul>
+                        <li>سيستمر اشتراكك حتى نهاية الفترة المدفوعة</li>
+                        <li>ستظل لديك إمكانية الوصول الكامل حتى تاريخ انتهاء الصلاحية</li>
+                        <li>لن يتم تحصيل رسوم منك للفترة التالية</li>
+                        <li>لن يتم استرداد أي رسوم مدفوعة مسبقاً</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>Automatic Renewal:</strong></p>
+                    <p>BRIEFIK uses a license key system, so subscriptions do not automatically renew. When your subscription expires, you will need to purchase a new license key to continue using paid features.</p>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>التجديد التلقائي:</strong></p>
+                    <p>تستخدم بريفك نظام مفاتيح الترخيص، لذلك لا يتم تجديد الاشتراكات تلقائياً. عند انتهاء صلاحية اشتراكك، ستحتاج إلى شراء مفتاح ترخيص جديد لمواصلة استخدام الميزات المدفوعة.</p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>6. Usage Limits</h3>
+                </div>
+                <div class="arabic-column">
+                    <h3>٦. حدود الاستخدام</h3>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p>Each subscription plan has specific limits:</p>
+                    <ul>
+                        <li><strong>Free:</strong> 2 hours total, 1 hour per session</li>
+                        <li><strong>Lite:</strong> 15 hours monthly, 1 hour per session</li>
+                        <li><strong>Pro:</strong> 40 hours monthly, 1.5 hours per session</li>
+                        <li><strong>Ultimate:</strong> 100 hours monthly, 2 hours per session</li>
+                    </ul>
+                </div>
+                <div class="arabic-column">
+                    <p>كل خطة اشتراك لها حدود محددة:</p>
+                    <ul>
+                        <li><strong>مجاني:</strong> ساعتان إجمالية، ساعة واحدة لكل جلسة</li>
+                        <li><strong>لايت:</strong> 15 ساعة شهرياً، ساعة واحدة لكل جلسة</li>
+                        <li><strong>برو:</strong> 40 ساعة شهرياً، ساعة ونصف لكل جلسة</li>
+                        <li><strong>ألتميت:</strong> 100 ساعة شهرياً، ساعتان لكل جلسة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p>If you exceed your plan limits, recording will be temporarily disabled until the next month or until you upgrade to a higher plan.</p>
+                </div>
+                <div class="arabic-column">
+                    <p>إذا تجاوزت حدود خطتك، سيتم إيقاف التسجيل مؤقتاً حتى الشهر التالي أو حتى تقوم بالترقية إلى خطة أعلى.</p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>7. Intellectual Property</h3>
+                </div>
+                <div class="arabic-column">
+                    <h3>٧. الملكية الفكرية</h3>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>App Ownership:</strong></p>
+                    <p>BRIEFIK and all related materials (including code, design, and logos) are owned by us and protected by copyright and intellectual property laws.</p>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>ملكية التطبيق:</strong></p>
+                    <p>بريفك وجميع المواد ذات الصلة (بما في ذلك الكود والتصميم والشعارات) مملوكة لنا ومحمية بموجب قوانين حقوق الطبع والنشر والملكية الفكرية.</p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>Your Content:</strong></p>
+                    <p>You retain all rights to the content you create using BRIEFIK (recordings, transcripts, summaries, exports). We do not claim any ownership of your content.</p>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>محتوى المستخدم:</strong></p>
+                    <p>أنت تحتفظ بجميع الحقوق في المحتوى الذي تنشئه باستخدام بريفك (التسجيلات والنصوص والملخصات والتصديرات). لا نطالب بأي ملكية لمحتواك.</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <div class="two-column">
+                    <div class="english-column">
+                        <h3>8. No Liability - Summary Service Only</h3>
+                    </div>
+                    <div class="arabic-column">
+                        <h3>٨. عدم المسؤولية - خدمة تلخيص فقط</h3>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong style="font-size: 1.2rem;">BRIEFIK CANNOT BE SUED. WE ARE ONLY A SUMMARY SERVICE.</strong></p>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong style="font-size: 1.2rem;">لا يمكن مقاضاة بريفك. نحن مجرد خدمة تلخيص.</strong></p>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong>YOU Alone Are Responsible:</strong></p>
+                        <p>By using this Service, you acknowledge and agree that:</p>
+                        <ul>
+                            <li><strong>BRIEFIK is ONLY a summary/transcription tool</strong> - We do not record, we do not advise you to record, we do not participate in your recordings</li>
+                            <li><strong>YOU are 100% responsible</strong> for your own recordings and how you obtain them</li>
+                            <li><strong>YOU are 100% responsible</strong> for obtaining all consents before recording anyone</li>
+                            <li><strong>BRIEFIK has ZERO involvement</strong> in how you create or obtain your audio files</li>
+                            <li><strong>BRIEFIK has ZERO liability</strong> for your actions, recordings, or consent failures</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>أنت وحدك المسؤول:</strong></p>
+                        <p>باستخدام هذه الخدمة، فإنك تقر وتوافق على أن:</p>
+                        <ul>
+                            <li><strong>بريفك هي فقط أداة تلخيص/نسخ</strong> - نحن لا نسجل، ولا ننصحك بالتسجيل، ولا نشارك في تسجيلاتك</li>
+                            <li><strong>أنت مسؤول بنسبة 100٪</strong> عن تسجيلاتك الخاصة وكيفية حصولك عليها</li>
+                            <li><strong>أنت مسؤول بنسبة 100٪</strong> عن الحصول على جميع الموافقات قبل تسجيل أي شخص</li>
+                            <li><strong>بريفك ليس لها أي تدخل</strong> في كيفية إنشاءك أو حصولك على ملفات الصوت الخاصة بك</li>
+                            <li><strong>بريفك ليس لها أي مسؤولية</strong> عن أفعالك أو تسجيلاتك أو فشلك في الحصول على الموافقة</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong>You Cannot Sue BRIEFIK:</strong></p>
+                        <p>You expressly agree and acknowledge that:</p>
+                        <ul>
+                            <li>BRIEFIK cannot be named in any lawsuit related to your recordings or usage</li>
+                            <li>BRIEFIK is not a party to any disputes arising from your recordings</li>
+                            <li>You waive any and all rights to bring legal action against BRIEFIK</li>
+                            <li>Any attempt to sue BRIEFIK for matters related to your recordings is baseless and will be dismissed</li>
+                            <li>We provide a technology tool only - we are not involved in your recording activities</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>لا يمكنك مقاضاة بريفك:</strong></p>
+                        <p>أنت توافق وتقر صراحةً بأن:</p>
+                        <ul>
+                            <li>لا يمكن إدراج بريفك في أي دعوى قضائية تتعلق بتسجيلاتك أو استخدامك</li>
+                            <li>بريفك ليست طرفاً في أي نزاعات ناشئة عن تسجيلاتك</li>
+                            <li>تتنازل عن أي وجميع الحقوق في رفع دعوى قانونية ضد بريفك</li>
+                            <li>أي محاولة لمقاضاة بريفك بشأن مسائل تتعلق بتسجيلاتك لا أساس لها وسيتم رفضها</li>
+                            <li>نحن نوفر أداة تقنية فقط - نحن لسنا مشاركين في أنشطة التسجيل الخاصة بك</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong>If Anyone Attempts to Sue BRIEFIK Because of Your Actions:</strong></p>
+                        <p>In the unlikely event that someone attempts to involve BRIEFIK in legal action because of YOUR recordings or YOUR failure to obtain consent, you agree to:</p>
+                        <ul>
+                            <li>Immediately notify them that BRIEFIK is not liable and is only a summary service</li>
+                            <li>Take full responsibility and prevent BRIEFIK from being named as a defendant</li>
+                            <li>Pay any costs BRIEFIK incurs if we must defend ourselves from baseless claims</li>
+                            <li>Acknowledge that YOU are the sole responsible party, not BRIEFIK</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>إذا حاول أي شخص مقاضاة بريفك بسبب أفعالك:</strong></p>
+                        <p>في حالة نادرة أن يحاول شخص ما إشراك بريفك في إجراء قانوني بسبب تسجيلاتك أو فشلك في الحصول على الموافقة، فإنك توافق على:</p>
+                        <ul>
+                            <li>إخطارهم فوراً بأن بريفك غير مسؤولة وهي مجرد خدمة تلخيص</li>
+                            <li>تحمل المسؤولية الكاملة ومنع إدراج بريفك كمدعى عليه</li>
+                            <li>دفع أي تكاليف تتكبدها بريفك إذا اضطررنا للدفاع عن أنفسنا من مطالبات لا أساس لها</li>
+                            <li>الإقرار بأنك الطرف المسؤول الوحيد، وليس بريفك</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong style="font-size: 1.1rem;">BRIEFIK IS A NEUTRAL TECHNOLOGY PROVIDER. WE ARE NOT RESPONSIBLE FOR USER ACTIONS. WE CANNOT BE HELD LIABLE FOR HOW USERS OBTAIN OR USE THEIR RECORDINGS.</strong></p>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong style="font-size: 1.1rem;">بريفك هي مزود تقنية محايد. نحن لسنا مسؤولين عن إجراءات المستخدمين. لا يمكن تحميلنا المسؤولية عن كيفية حصول المستخدمين على تسجيلاتهم أو استخدامها.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <div class="two-column">
+                    <div class="english-column">
+                        <h3>9. AI Accuracy Disclaimer</h3>
+                    </div>
+                    <div class="arabic-column">
+                        <h3>٩. إخلاء المسؤولية عن دقة الذكاء الاصطناعي</h3>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong>AI-Powered Transcription:</strong></p>
+                        <p>BRIEFIK uses artificial intelligence (AI) technology to transcribe audio to text. While we strive to provide accurate transcriptions, AI technology is not perfect and may produce errors, inaccuracies, or omissions.</p>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>النسخ المدعوم بالذكاء الاصطناعي:</strong></p>
+                        <p>تستخدم بريفك تقنية الذكاء الاصطناعي (AI) لتحويل الصوت إلى نص. بينما نسعى لتقديم نسخ دقيقة، فإن تقنية الذكاء الاصطناعي ليست مثالية وقد تنتج أخطاء أو عدم دقة أو إغفالات.</p>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong>No Guarantee of Accuracy:</strong></p>
+                        <p><strong>WE DO NOT GUARANTEE THE ACCURACY, COMPLETENESS, OR RELIABILITY OF ANY TRANSCRIPTS OR SUMMARIES GENERATED BY THE SERVICE.</strong> Transcription quality may be affected by:</p>
+                        <ul>
+                            <li>Audio quality (background noise, microphone quality, audio distortion)</li>
+                            <li>Speaker accents, dialects, or speech patterns</li>
+                            <li>Technical terminology, proper nouns, or specialized vocabulary</li>
+                            <li>Multiple speakers talking simultaneously</li>
+                            <li>Fast speech or unclear articulation</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>عدم ضمان الدقة:</strong></p>
+                        <p><strong>لا نضمن دقة أو اكتمال أو موثوقية أي نصوص أو ملخصات يتم إنشاؤها بواسطة الخدمة.</strong> قد تتأثر جودة النسخ بـ:</p>
+                        <ul>
+                            <li>جودة الصوت (ضوضاء الخلفية، جودة الميكروفون، تشويه الصوت)</li>
+                            <li>لهجات المتحدثين أو اللهجات المحلية أو أنماط الكلام</li>
+                            <li>المصطلحات التقنية أو الأسماء الخاصة أو المفردات المتخصصة</li>
+                            <li>عدة متحدثين يتحدثون في وقت واحد</li>
+                            <li>الكلام السريع أو النطق غير الواضح</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong>User Responsibility to Verify:</strong></p>
+                        <p><strong>YOU ARE SOLELY RESPONSIBLE FOR:</strong></p>
+                        <ul>
+                            <li>Reviewing and verifying the accuracy of all transcripts and summaries</li>
+                            <li>Correcting any errors or inaccuracies before using or relying on the content</li>
+                            <li>Not relying on transcripts for critical decisions without independent verification</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>مسؤولية المستخدم عن التحقق:</strong></p>
+                        <p><strong>أنت مسؤول بالكامل عن:</strong></p>
+                        <ul>
+                            <li>مراجعة والتحقق من دقة جميع النصوص والملخصات</li>
+                            <li>تصحيح أي أخطاء أو عدم دقة قبل استخدام أو الاعتماد على المحتوى</li>
+                            <li>عدم الاعتماد على النصوص لاتخاذ قرارات حاسمة دون تحقق مستقل</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong>Not Suitable for Critical Use:</strong></p>
+                        <p><strong>TRANSCRIPTS AND SUMMARIES SHOULD NOT BE USED FOR:</strong></p>
+                        <ul>
+                            <li>Medical diagnoses, treatment decisions, or healthcare purposes</li>
+                            <li>Legal proceedings, contracts, or legal advice</li>
+                            <li>Financial advice or investment decisions</li>
+                            <li>Safety-critical applications</li>
+                            <li>Any situation where errors could cause harm, liability, or significant loss</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>غير مناسب للاستخدام الحرج:</strong></p>
+                        <p><strong>لا ينبغي استخدام النصوص والملخصات في:</strong></p>
+                        <ul>
+                            <li>التشخيصات الطبية أو قرارات العلاج أو أغراض الرعاية الصحية</li>
+                            <li>الإجراءات القانونية أو العقود أو المشورة القانونية</li>
+                            <li>المشورة المالية أو قرارات الاستثمار</li>
+                            <li>التطبيقات الحرجة للسلامة</li>
+                            <li>أي حالة يمكن أن تسبب فيها الأخطاء ضرراً أو مسؤولية أو خسارة كبيرة</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong>No Liability for AI Errors:</strong></p>
+                        <p><strong>WE ARE NOT LIABLE FOR:</strong></p>
+                        <ul>
+                            <li>Any errors, inaccuracies, or omissions in transcripts or summaries</li>
+                            <li>Decisions made based on AI-generated content</li>
+                            <li>Loss or damages resulting from reliance on transcripts or summaries</li>
+                            <li>Misunderstandings or miscommunications caused by transcription errors</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>عدم المسؤولية عن أخطاء الذكاء الاصطناعي:</strong></p>
+                        <p><strong>نحن لسنا مسؤولين عن:</strong></p>
+                        <ul>
+                            <li>أي أخطاء أو عدم دقة أو إغفالات في النصوص أو الملخصات</li>
+                            <li>القرارات المتخذة بناءً على المحتوى المُنشأ بواسطة الذكاء الاصطناعي</li>
+                            <li>الخسارة أو الأضرار الناتجة عن الاعتماد على النصوص أو الملخصات</li>
+                            <li>سوء الفهم أو سوء الاتصال الناجم عن أخطاء النسخ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong>BY USING THIS SERVICE, YOU ACKNOWLEDGE THAT AI TRANSCRIPTION IS AN ASSISTIVE TOOL ONLY AND THAT YOU WILL INDEPENDENTLY VERIFY ALL IMPORTANT INFORMATION.</strong></p>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>باستخدام هذه الخدمة، فإنك تقر بأن نسخ الذكاء الاصطناعي هو أداة مساعدة فقط وأنك ستتحقق بشكل مستقل من جميع المعلومات المهمة.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <div class="two-column">
+                    <div class="english-column">
+                        <h3>10. Complete Limitation of Liability</h3>
+                    </div>
+                    <div class="arabic-column">
+                        <h3>١٠. الحد الكامل من المسؤولية</h3>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong>Service Provided "AS IS":</strong></p>
+                        <p>BRIEFIK is provided "AS IS" and "AS AVAILABLE" with ALL FAULTS and without warranties of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not guarantee that the App will be error-free, uninterrupted, secure, or meet your requirements.</p>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>الخدمة مقدمة "كما هي":</strong></p>
+                        <p>يتم توفير بريفك "كما هي" و"حسب التوفر" مع جميع العيوب ودون أي ضمانات من أي نوع، صريحة أو ضمنية، بما في ذلك على سبيل المثال لا الحصر ضمانات القابلية للتسويق أو الملاءمة لغرض معين أو عدم الانتهاك. لا نضمن أن التطبيق سيكون خالياً من الأخطاء أو غير منقطع أو آمناً أو أنه سيلبي متطلباتك.</p>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong>ABSOLUTE DISCLAIMER OF LIABILITY:</strong></p>
+                        <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW, BRIEFIK SHALL NOT BE LIABLE FOR ANY:</strong></p>
+                        <ul>
+                            <li>Direct, indirect, incidental, special, consequential, or exemplary damages</li>
+                            <li>Loss of profits, revenue, data, use, goodwill, or other intangible losses</li>
+                            <li>Damages resulting from your use or inability to use the Service</li>
+                            <li>Damages resulting from any recordings, transcripts, summaries, or AI-generated content</li>
+                            <li>Damages resulting from unauthorized access to or alteration of your content</li>
+                            <li>Damages resulting from any third-party services or providers</li>
+                            <li>Damages resulting from errors, bugs, viruses, or service interruptions</li>
+                            <li>Legal claims, lawsuits, disputes, or court proceedings arising from your use of the Service</li>
+                            <li>Costs of defense, legal fees, settlements, or judgments related to your actions</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>إخلاء المسؤولية المطلق:</strong></p>
+                        <p><strong>بأقصى حد يسمح به القانون، لن تكون بريفك مسؤولة عن أي:</strong></p>
+                        <ul>
+                            <li>أضرار مباشرة أو غير مباشرة أو عرضية أو خاصة أو تبعية أو تمثيلية</li>
+                            <li>خسارة أرباح أو إيرادات أو بيانات أو استخدام أو حسن نية أو خسائر غير ملموسة أخرى</li>
+                            <li>أضرار ناتجة عن استخدامك أو عدم قدرتك على استخدام الخدمة</li>
+                            <li>أضرار ناتجة عن أي تسجيلات أو نصوص أو ملخصات أو محتوى ينشئه الذكاء الاصطناعي</li>
+                            <li>أضرار ناتجة عن الوصول غير المصرح به إلى محتواك أو تعديله</li>
+                            <li>أضرار ناتجة عن أي خدمات أو مزودي طرف ثالث</li>
+                            <li>أضرار ناتجة عن أخطاء أو عيوب أو فيروسات أو انقطاعات في الخدمة</li>
+                            <li>مطالبات قانونية أو دعاوى قضائية أو نزاعات أو إجراءات محكمة ناشئة عن استخدامك للخدمة</li>
+                            <li>تكاليف الدفاع أو الرسوم القانونية أو التسويات أو الأحكام المتعلقة بأفعالك</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong>NO COURT ATTENDANCE, NO LEGAL COSTS:</strong></p>
+                        <p><strong>CRITICAL: IF ANY PERSON, ENTITY, OR AUTHORITY TAKES LEGAL ACTION AGAINST YOU FOR YOUR USE OF THE SERVICE OR YOUR RECORDINGS:</strong></p>
+                        <ul>
+                            <li><strong>YOU</strong> are the defendant - NOT US</li>
+                            <li><strong>YOU</strong> must appear in court - NOT US</li>
+                            <li><strong>YOU</strong> must pay all legal fees - NOT US</li>
+                            <li><strong>YOU</strong> must pay any judgments or settlements - NOT US</li>
+                            <li>We will NOT participate in any legal proceedings</li>
+                            <li>We will NOT pay any costs, damages, or fees related to your legal matters</li>
+                            <li>We will NOT provide testimony or evidence on your behalf</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>عدم حضور المحكمة، عدم التكاليف القانونية:</strong></p>
+                        <p><strong>مهم جداً: إذا اتخذ أي شخص أو كيان أو سلطة إجراءً قانونياً ضدك بسبب استخدامك للخدمة أو تسجيلاتك:</strong></p>
+                        <ul>
+                            <li><strong>أنت</strong> المدعى عليه - وليس نحن</li>
+                            <li><strong>أنت</strong> يجب أن تمثل في المحكمة - وليس نحن</li>
+                            <li><strong>أنت</strong> يجب أن تدفع جميع الرسوم القانونية - وليس نحن</li>
+                            <li><strong>أنت</strong> يجب أن تدفع أي أحكام أو تسويات - وليس نحن</li>
+                            <li>لن نشارك في أي إجراءات قانونية</li>
+                            <li>لن ندفع أي تكاليف أو أضرار أو رسوم متعلقة بمسائلك القانونية</li>
+                            <li>لن نقدم شهادة أو أدلة نيابة عنك</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong>You Are Solely Responsible:</strong></p>
+                        <p>Your use of BRIEFIK is at your sole and exclusive risk. You bear 100% of the responsibility and liability for:</p>
+                        <ul>
+                            <li>How you use the Service</li>
+                            <li>What you record and upload</li>
+                            <li>Whether you obtain proper consent from recorded individuals</li>
+                            <li>Compliance with all applicable laws in your jurisdiction</li>
+                            <li>Any legal consequences arising from your actions</li>
+                            <li>Any disputes, claims, or lawsuits filed against you</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>أنت المسؤول الوحيد:</strong></p>
+                        <p>استخدامك لـ بريفك يكون على مسؤوليتك وحدك حصرياً. أنت تتحمل 100٪ من المسؤولية والالتزام عن:</p>
+                        <ul>
+                            <li>كيفية استخدامك للخدمة</li>
+                            <li>ما تسجله وترفعه</li>
+                            <li>ما إذا كنت تحصل على موافقة مناسبة من الأفراد المسجلين</li>
+                            <li>الامتثال لجميع القوانين المعمول بها في منطقتك</li>
+                            <li>أي عواقب قانونية ناشئة عن أفعالك</li>
+                            <li>أي نزاعات أو مطالبات أو دعاوى قضائية مرفوعة ضدك</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong>Maximum Liability Cap:</strong></p>
+                        <p>In the unlikely event that, despite the above disclaimers, we are held liable for any reason, our maximum total liability shall be limited to the lesser of: (1) the amount you paid us in the 12 months before the claim, or (2) 100 Saudi Riyals (SAR 100).</p>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>الحد الأقصى للمسؤولية:</strong></p>
+                        <p>في حالة نادرة أنه على الرغم من إخلاءات المسؤولية أعلاه، تم اعتبارنا مسؤولين لأي سبب، فإن حدنا الأقصى للمسؤولية الإجمالية سيكون محدوداً بالأقل من: (1) المبلغ الذي دفعته لنا في الـ 12 شهراً قبل المطالبة، أو (2) 100 ريال سعودي (100 SAR).</p>
+                    </div>
+                </div>
+
+                <div class="two-column">
+                    <div class="english-column">
+                        <p><strong>BY USING THIS SERVICE, YOU AGREE THAT YOU WILL NOT ATTEMPT TO HOLD US LIABLE, SUE US, OR INVOLVE US IN ANY LEGAL PROCEEDINGS RELATED TO YOUR USE OF THE SERVICE. YOU WAIVE ANY RIGHT TO CLAIM DAMAGES FROM US.</strong></p>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>باستخدام هذه الخدمة، فإنك توافق على أنك لن تحاول تحميلنا المسؤولية أو مقاضاتنا أو إشراكنا في أي إجراءات قانونية تتعلق باستخدامك للخدمة. أنت تتنازل عن أي حق في المطالبة بتعويضات منا.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <div class="two-column">
+                    <div class="english-column">
+                        <p style="font-size: 1rem; font-weight: 500;">Our maximum liability to you shall not exceed the amount you paid for your subscription in the past 12 months.</p>
+                    </div>
+                    <div class="arabic-column">
+                        <p style="font-size: 1rem; font-weight: 500;">الحد الأقصى لمسؤوليتنا تجاهك لن يتجاوز المبلغ الذي دفعته لاشتراكك خلال الـ 12 شهراً الماضية.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>11. Privacy and Data Protection</h3>
+                </div>
+                <div class="arabic-column">
+                    <h3>١١. الخصوصية وحماية البيانات</h3>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p>Your use of BRIEFIK is also subject to our Privacy Policy, which explains how we collect, use, and protect your personal information.</p>
+                </div>
+                <div class="arabic-column">
+                    <p>استخدامك لـ بريفك يخضع أيضاً لسياسة الخصوصية الخاصة بنا، والتي تشرح كيفية جمعنا واستخدامنا وحمايتنا لمعلوماتك الشخصية.</p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>Key Points:</strong></p>
+                    <ul>
+                        <li>All audio recordings are deleted immediately after processing</li>
+                        <li>Transcripts and summaries are stored locally on your device only</li>
+                        <li>We do not sell or share your personal data</li>
+                    </ul>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>النقاط الرئيسية:</strong></p>
+                    <ul>
+                        <li>يتم حذف جميع التسجيلات الصوتية فوراً بعد المعالجة</li>
+                        <li>يتم تخزين النصوص والملخصات محلياً على جهازك فقط</li>
+                        <li>لا نبيع أو نشارك بياناتك الشخصية</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>12. Third-Party Services and Force Majeure</h3>
+                </div>
+                <div class="arabic-column">
+                    <h3>١٢. خدمات الطرف الثالث والقوة القاهرة</h3>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>Third-Party Dependencies:</strong></p>
+                    <p>BRIEFIK relies on various third-party services to operate, including but not limited to:</p>
+                    <ul>
+                        <li>AI transcription service providers</li>
+                        <li>Authentication and database service providers</li>
+                        <li>Cloud hosting and infrastructure providers</li>
+                        <li>Content delivery networks</li>
+                        <li>Payment processing services</li>
+                    </ul>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>الاعتماد على خدمات الطرف الثالث:</strong></p>
+                    <p>تعتمد بريفك على خدمات الطرف الثالث المختلفة للعمل، بما في ذلك على سبيل المثال لا الحصر:</p>
+                    <ul>
+                        <li>مزودي خدمات النسخ بالذكاء الاصطناعي</li>
+                        <li>مزودي خدمات المصادقة وقاعدة البيانات</li>
+                        <li>مزودي الاستضافة السحابية والبنية التحتية</li>
+                        <li>شبكات توصيل المحتوى</li>
+                        <li>خدمات معالجة الدفع</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>No Control Over Third Parties:</strong></p>
+                    <p>We have NO control over these third-party services. Their availability, performance, security, and reliability are entirely outside our control.</p>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>عدم السيطرة على أطراف ثالثة:</strong></p>
+                    <p>ليس لدينا سيطرة على خدمات الطرف الثالث هذه. توفرها وأدائها وأمانها وموثوقيتها خارجة تماماً عن سيطرتنا.</p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>NO LIABILITY FOR THIRD-PARTY FAILURES:</strong></p>
+                    <p><strong>WE ARE NOT LIABLE FOR:</strong></p>
+                    <ul>
+                        <li>Service outages or downtime caused by third-party providers</li>
+                        <li>Data loss or corruption due to third-party failures</li>
+                        <li>Security breaches or data breaches at third-party services</li>
+                        <li>Errors, inaccuracies, or bugs in third-party AI models or APIs</li>
+                        <li>Changes to third-party services that affect BRIEFIK functionality</li>
+                        <li>Termination or discontinuation of third-party services</li>
+                        <li>Pricing changes or service degradation by third parties</li>
+                    </ul>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>عدم المسؤولية عن إخفاقات الطرف الثالث:</strong></p>
+                    <p><strong>نحن لسنا مسؤولين عن:</strong></p>
+                    <ul>
+                        <li>انقطاع الخدمة أو التوقف الناجم عن مزودي الطرف الثالث</li>
+                        <li>فقدان البيانات أو تلفها بسبب إخفاقات الطرف الثالث</li>
+                        <li>الاختراقات الأمنية أو اختراقات البيانات في خدمات الطرف الثالث</li>
+                        <li>الأخطاء أو عدم الدقة أو الأخطاء في نماذج أو واجهات برمجة التطبيقات الذكاء الاصطناعي للطرف الثالث</li>
+                        <li>التغييرات على خدمات الطرف الثالث التي تؤثر على وظائف بريفك</li>
+                        <li>إنهاء أو وقف خدمات الطرف الثالث</li>
+                        <li>تغييرات الأسعار أو تدهور الخدمة من قبل أطراف ثالثة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>Force Majeure:</strong></p>
+                    <p>We shall not be liable for any failure or delay in performance due to circumstances beyond our reasonable control, including but not limited to:</p>
+                    <ul>
+                        <li>Acts of God, natural disasters, pandemics, or public health emergencies</li>
+                        <li>War, terrorism, civil unrest, or government actions</li>
+                        <li>Internet outages, power failures, or telecommunications failures</li>
+                        <li>Cyber attacks, hacking attempts, or distributed denial-of-service attacks</li>
+                        <li>Third-party service provider failures or disruptions</li>
+                        <li>Changes in laws or regulations that prevent service provision</li>
+                        <li>Labor disputes, strikes, or workforce shortages</li>
+                    </ul>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>القوة القاهرة:</strong></p>
+                    <p>لن نكون مسؤولين عن أي فشل أو تأخير في الأداء بسبب ظروف خارجة عن سيطرتنا المعقولة، بما في ذلك على سبيل المثال لا الحصر:</p>
+                    <ul>
+                        <li>أفعال الله أو الكوارث الطبيعية أو الأوبئة أو حالات الطوارئ الصحية العامة</li>
+                        <li>الحرب أو الإرهاب أو الاضطرابات المدنية أو إجراءات حكومية</li>
+                        <li>انقطاع الإنترنت أو انقطاع التيار الكهربائي أو فشل الاتصالات</li>
+                        <li>الهجمات الإلكترونية أو محاولات الاختراق أو هجمات رفض الخدمة الموزعة</li>
+                        <li>إخفاقات أو اضطرابات مزودي خدمات الطرف الثالث</li>
+                        <li>التغييرات في القوانين أو اللوائح التي تمنع تقديم الخدمة</li>
+                        <li>نزاعات العمل أو الإضرابات أو نقص القوى العاملة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>No Compensation for Service Interruptions:</strong></p>
+                    <p>If the Service becomes unavailable due to third-party failures or force majeure events, you are NOT entitled to refunds, credits, or any form of compensation.</p>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>عدم التعويض عن انقطاعات الخدمة:</strong></p>
+                    <p>إذا أصبحت الخدمة غير متاحة بسبب إخفاقات الطرف الثالث أو أحداث القوة القاهرة، فأنت غير مستحق لاستردادات أو أرصدة أو أي شكل من أشكال التعويض.</p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>Service Continuity Not Guaranteed:</strong></p>
+                    <p>We make no guarantee that BRIEFIK will continue to operate indefinitely. We may discontinue the Service at any time if third-party providers become unavailable, too expensive, or if we decide to cease operations.</p>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>استمرارية الخدمة غير مضمونة:</strong></p>
+                    <p>لا نقدم أي ضمان بأن بريفك ستستمر في العمل إلى أجل غير مسمى. قد نوقف الخدمة في أي وقت إذا أصبح مزودو الطرف الثالث غير متاحين أو مكلفين للغاية أو إذا قررنا وقف العمليات.</p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>13. Termination</h3>
+
+                    <p>We reserve the right to suspend or terminate your access to BRIEFIK at any time for any reason, including:</p>
+                    <ul>
+                        <li>Violation of these Terms</li>
+                        <li>Fraudulent or illegal use</li>
+                        <li>Non-payment</li>
+                        <li>Abusive behavior toward support staff</li>
+                    </ul>
+                </div>
+                <div class="arabic-column">
+                    <h3>١٣. إنهاء الخدمة</h3>
+
+                    <p>نحتفظ بالحق في تعليق أو إنهاء وصولك إلى بريفك في أي وقت، لأي سبب، بما في ذلك:</p>
+                    <ul>
+                        <li>انتهاك هذه الشروط</li>
+                        <li>الاستخدام الاحتيالي أو غير القانوني</li>
+                        <li>عدم الدفع</li>
+                        <li>السلوك المسيء تجاه فريق الدعم</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>14. Changes to Terms</h3>
+
+                    <p>We may update these Terms of Service from time to time. We will notify you of any material changes via email or through the App. Your continued use of BRIEFIK after changes constitutes acceptance of the new Terms.</p>
+                </div>
+                <div class="arabic-column">
+                    <h3>١٤. التغييرات على الشروط</h3>
+
+                    <p>قد نقوم بتحديث شروط الخدمة هذه من وقت لآخر. سنقوم بإخطارك بأي تغييرات جوهرية عن طريق البريد الإلكتروني أو من خلال التطبيق. استمرارك في استخدام بريفك بعد التغييرات يشكل قبولك للشروط الجديدة.</p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>15. Severability</h3>
+
+                    <p>If any provision of these Terms is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction, such provision shall be modified to the minimum extent necessary to make it valid and enforceable, or if such modification is not possible, it shall be severed from these Terms.</p>
+
+                    <p>The invalidity, illegality, or unenforceability of any provision shall not affect the validity, legality, or enforceability of the remaining provisions, which shall remain in full force and effect.</p>
+                </div>
+                <div class="arabic-column">
+                    <h3>١٥. القابلية للفصل</h3>
+
+                    <p>إذا تبين أن أي بند من هذه الشروط غير صالح أو غير قانوني أو غير قابل للتنفيذ من قبل محكمة مختصة، فيجب تعديل هذا البند إلى الحد الأدنى اللازم لجعله صالحاً وقابلاً للتنفيذ، أو إذا لم يكن هذا التعديل ممكناً، فيجب فصله من هذه الشروط.</p>
+
+                    <p>لن يؤثر عدم صلاحية أو عدم قانونية أو عدم قابلية تنفيذ أي بند على صلاحية أو قانونية أو قابلية تنفيذ الأحكام المتبقية، والتي ستظل سارية المفعول بالكامل.</p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>16. Entire Agreement</h3>
+
+                    <p>These Terms of Service, together with our Privacy Policy, constitute the entire agreement between you and BRIEFIK regarding your use of the Service and supersede all prior or contemporaneous understandings, agreements, representations, and warranties, whether written or oral, regarding the Service.</p>
+
+                    <p>No failure or delay by us in exercising any right or remedy under these Terms shall operate as a waiver of that right or remedy. No single or partial exercise of any right or remedy shall preclude any other or further exercise of that right or remedy.</p>
+                </div>
+                <div class="arabic-column">
+                    <h3>١٦. الاتفاقية الكاملة</h3>
+
+                    <p>تشكل شروط الخدمة هذه، مع سياسة الخصوصية الخاصة بنا، الاتفاقية الكاملة بينك وبين بريفك فيما يتعلق باستخدامك للخدمة وتحل محل جميع التفاهمات والاتفاقيات والتمثيلات والضمانات السابقة أو المعاصرة، سواء كانت مكتوبة أو شفهية، فيما يتعلق بالخدمة.</p>
+
+                    <p>لن يعمل أي فشل أو تأخير من جانبنا في ممارسة أي حق أو تعويض بموجب هذه الشروط كتنازل عن ذلك الحق أو التعويض. لن يمنع أي ممارسة فردية أو جزئية لأي حق أو تعويض أي ممارسة أخرى أو أخرى لذلك الحق أو التعويض.</p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>17. Governing Law</h3>
+
+                    <p>These Terms shall be governed by and construed in accordance with the laws of the Kingdom of Saudi Arabia. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts of Saudi Arabia.</p>
+                </div>
+                <div class="arabic-column">
+                    <h3>١٧. القانون الحاكم</h3>
+
+                    <p>تخضع هذه الشروط وتفسر وفقاً لقوانين المملكة العربية السعودية. أي نزاعات ناشئة عن هذه الشروط ستخضع للاختصاص القضائي الحصري لمحاكم المملكة العربية السعودية.</p>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>18. Contact Us</h3>
+
+                    <p>If you have any questions about these Terms of Service, please contact us:</p>
+                    <ul>
+                        <li><strong>Email:</strong> support@briefik.com</li>
+                        <li><strong>Website:</strong> briefik.com</li>
+                    </ul>
+                </div>
+                <div class="arabic-column">
+                    <h3>١٨. اتصل بنا</h3>
+
+                    <p>إذا كان لديك أي أسئلة حول شروط الخدمة هذه، يرجى الاتصال بنا:</p>
+                    <ul>
+                        <li><strong>البريد الإلكتروني:</strong> support@briefik.com</li>
+                        <li><strong>الموقع:</strong> briefik.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 3rem;">
+                <p style="font-size: 1.3rem; font-weight: 700; text-align: center; margin-bottom: 1.5rem;">
+                    قبول الشروط | ACCEPTANCE OF TERMS
+                </p>
+
+                <!-- BINDING AGREEMENT -->
+                <div class="two-column">
+                    <div class="english-column">
+                        <h3 style="margin-top: 0;">BINDING AGREEMENT</h3>
+
+                        <p><strong style="font-size: 1.1rem;">BY DOWNLOADING THE BRIEFIK APPLICATION, CREATING AN ACCOUNT, OR USING THE SERVICE IN ANY WAY, YOU EXPRESSLY ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE LEGALLY BOUND BY ALL OF THESE TERMS OF SERVICE.</strong></p>
+
+                        <p><strong>Your acceptance of these Terms includes, but is not limited to, your agreement that:</strong></p>
+                        <ul>
+                            <li>You are solely responsible for obtaining all necessary recording consents</li>
+                            <li>You will indemnify and hold BRIEFIK harmless from any legal claims arising from your use</li>
+                            <li>BRIEFIK is NOT liable for any damages, court costs, or legal fees</li>
+                            <li>You will NOT sue BRIEFIK or involve us in any legal proceedings</li>
+                            <li>AI transcriptions are assistive tools only and may contain errors</li>
+                            <li>You waive any right to claim damages or compensation from BRIEFIK</li>
+                            <li>These Terms constitute a legally binding contract between you and BRIEFIK</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-column">
+                        <h3 style="margin-top: 0;">اتفاقية ملزمة</h3>
+
+                        <p><strong style="font-size: 1.1rem;">بتنزيل تطبيق بريفك أو إنشاء حساب أو استخدام الخدمة بأي طريقة، فإنك تقر صراحةً بأنك قد قرأت وفهمت ووافقت على الالتزام قانونياً بجميع شروط الخدمة هذه.</strong></p>
+
+                        <p><strong>يشمل قبولك لهذه الشروط، على سبيل المثال لا الحصر، موافقتك على أن:</strong></p>
+                        <ul>
+                            <li>أنت المسؤول الوحيد عن الحصول على جميع موافقات التسجيل اللازمة</li>
+                            <li>ستقوم بتعويض بريفك وحمايتها من أي مطالبات قانونية ناشئة عن استخدامك</li>
+                            <li>بريفك غير مسؤولة عن أي أضرار أو تكاليف محكمة أو رسوم قانونية</li>
+                            <li>لن تقاضي بريفك أو تشركنا في أي إجراءات قانونية</li>
+                            <li>نسخ الذكاء الاصطناعي هي أدوات مساعدة فقط وقد تحتوي على أخطاء</li>
+                            <li>تتنازل عن أي حق في المطالبة بتعويضات أو تعويض من بريفك</li>
+                            <li>تشكل هذه الشروط عقداً ملزماً قانونياً بينك وبين بريفك</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- WHEN YOU AGREE -->
+                <div class="two-column" style="margin-top: 1.5rem;">
+                    <div class="english-column">
+                        <p><strong>When You Agree:</strong></p>
+                        <p>Your agreement to these Terms is deemed effective and legally binding immediately upon the earliest of the following actions:</p>
+                        <ul>
+                            <li>Downloading or installing the BRIEFIK application</li>
+                            <li>Creating a user account</li>
+                            <li>Uploading any audio file for processing</li>
+                            <li>Using any feature or functionality of the Service</li>
+                            <li>Purchasing any subscription or license key</li>
+                        </ul>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>متى توافق:</strong></p>
+                        <p>تعتبر موافقتك على هذه الشروط سارية المفعول وملزمة قانونياً فوراً عند أول الإجراءات التالية:</p>
+                        <ul>
+                            <li>تنزيل أو تثبيت تطبيق بريفك</li>
+                            <li>إنشاء حساب مستخدم</li>
+                            <li>رفع أي ملف صوتي للمعالجة</li>
+                            <li>استخدام أي ميزة أو وظيفة من الخدمة</li>
+                            <li>شراء أي اشتراك أو مفتاح ترخيص</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- AGE REQUIREMENT -->
+                <div class="two-column" style="margin-top: 1.5rem;">
+                    <div class="english-column">
+                        <p><strong>Age Requirement:</strong></p>
+                        <p>You must be at least 18 years old to use this Service. By using BRIEFIK, you represent and warrant that you are 18 years of age or older, or if you are under 18, that you have obtained parental or guardian consent to use the Service and your parent/guardian agrees to be bound by these Terms on your behalf.</p>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>متطلبات العمر:</strong></p>
+                        <p>يجب أن يكون عمرك 18 عاماً على الأقل لاستخدام هذه الخدمة. باستخدام بريفك، فإنك تقر وتضمن أن عمرك 18 عاماً أو أكثر، أو إذا كنت أقل من 18 عاماً، فقد حصلت على موافقة الوالدين أو الوصي لاستخدام الخدمة وأن والدك/وصيك يوافق على الالتزام بهذه الشروط نيابة عنك.</p>
+                    </div>
+                </div>
+
+                <!-- FINAL WARNING -->
+                <div class="two-column" style="margin-top: 1.5rem;">
+                    <div class="english-column">
+                        <p><strong>IF YOU DO NOT AGREE TO THESE TERMS, DO NOT DOWNLOAD THE APP, DO NOT CREATE AN ACCOUNT, AND DO NOT USE THE SERVICE.</strong></p>
+                    </div>
+                    <div class="arabic-column">
+                        <p><strong>إذا كنت لا توافق على هذه الشروط، لا تقم بتنزيل التطبيق ولا تنشئ حساباً ولا تستخدم الخدمة.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="last-updated">
+                <p>آخر تحديث: ١٤ أكتوبر ٢٠٢٥</p>
+                <p>Last Updated: October 14, 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p style="margin-bottom: 0.8rem;">
+            © 2025 BRIEFIK. صُنع في السعودية بكل حب | Made in Saudi Arabia with ❤️
+        </p>
+        <p>
+            <a href="index.html">Home | الرئيسية</a> •
+            <a href="pricing.html">Pricing | الأسعار</a> •
+            <a href="privacy.html">Privacy | الخصوصية</a> •
+            <a href="terms.html">Terms | الشروط</a>
+        </p>
+    </footer>
+</body>
+</html>
