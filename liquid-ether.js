@@ -893,13 +893,12 @@ class LiquidEther {
 
 // Auto-initialize on DOM ready
 document.addEventListener('DOMContentLoaded', function() {
-  const container = document.body;
-
   // Detect mobile
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    || ('ontouchstart' in window)
     || window.innerWidth < 768;
 
-  // Create a wrapper for the liquid ether effect
+  // Create wrapper for the liquid ether effect
   const liquidWrapper = document.createElement('div');
   liquidWrapper.id = 'liquid-ether-bg';
   liquidWrapper.style.cssText = `
@@ -910,40 +909,43 @@ document.addEventListener('DOMContentLoaded', function() {
     height: 100%;
     z-index: 0;
     pointer-events: none;
-    opacity: ${isMobile ? '0.6' : '0.8'};
+    opacity: ${isMobile ? '0.4' : '0.8'};
+    transition: opacity 0.3s ease;
   `;
   document.body.prepend(liquidWrapper);
 
-  // Initialize LiquidEther with BRIEFIK brand colors (blue only)
-  // Use reduced settings on mobile for better performance
+  // Initialize LiquidEther with different settings for mobile vs desktop
   window.liquidEther = new LiquidEther(liquidWrapper, {
-    colors: ['#3d8aed', '#5ca3ff', '#7db8ff'],  // BRIEFIK brand: dark blue, primary blue, light blue
-    mouseForce: isMobile ? 10 : 20,
-    cursorSize: isMobile ? 60 : 100,
-    resolution: isMobile ? 0.3 : 0.5,
+    colors: ['#1e5fba', '#3d8aed', '#5ca3ff'],  // Deeper brand blues (less white)
+    mouseForce: isMobile ? 8 : 20,
+    cursorSize: isMobile ? 50 : 100,
+    resolution: isMobile ? 0.25 : 0.5,  // Lower resolution on mobile for performance
     autoDemo: true,
-    autoSpeed: isMobile ? 0.3 : 0.5,
-    autoIntensity: isMobile ? 1.2 : 2.2
+    autoSpeed: isMobile ? 0.2 : 0.5,  // Much slower on mobile
+    autoIntensity: isMobile ? 0.8 : 2.2,  // Much less intense on mobile
+    dt: isMobile ? 0.01 : 0.014,  // Slower simulation on mobile
+    iterationsPoisson: isMobile ? 16 : 32,  // Fewer iterations on mobile
+    iterationsViscous: isMobile ? 16 : 32
   });
 
-  // Pause effect while scrolling on mobile to prevent flickering
+  // Handle scroll on mobile - fade out during scroll to prevent flickering
   if (isMobile) {
     let scrollTimeout;
-    let isScrolling = false;
+    let ticking = false;
 
     window.addEventListener('scroll', function() {
-      if (!isScrolling && window.liquidEther) {
-        window.liquidEther.pause();
-        isScrolling = true;
+      if (!ticking) {
+        // Fade out immediately when scroll starts
+        liquidWrapper.style.opacity = '0.1';
+        ticking = true;
       }
 
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(function() {
-        if (window.liquidEther) {
-          window.liquidEther.start();
-        }
-        isScrolling = false;
-      }, 150);
+        // Fade back in after scroll ends
+        liquidWrapper.style.opacity = '0.4';
+        ticking = false;
+      }, 200);
     }, { passive: true });
   }
 });

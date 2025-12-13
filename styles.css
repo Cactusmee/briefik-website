@@ -2040,4 +2040,10 @@ textarea {
   .pricing-card {
     padding: var(--space-5);
   }
+
+  /* Extra space for Pro card on mobile due to badge overlap */
+  .pricing-card--pro {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
