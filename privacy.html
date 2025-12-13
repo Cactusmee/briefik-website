@@ -1,152 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - BRIEFIK | سياسة الخصوصية - بريفك</title>
     <meta name="description" content="BRIEFIK Privacy Policy - How we protect your data and respect your privacy.">
-    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/codec-pro">
+
+    <!-- Font preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+
+    <!-- Codec Pro Font - Primary brand font -->
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/codec-pro?styles=36014,36015,36016,36017,36018,36019,36020,36021,36022,36023,36024,36025">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #5ca3ff;
-            --primary-light: #7db8ff;
-            --primary-dark: #3d8aed;
-            --black: #000000;
-            --dark-bg: #0a0a0b;
-            --card-bg: #121214;
-        }
-
-        body {
-            font-family: 'Codec Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: var(--black);
-            color: white;
-            overflow-x: hidden;
-            line-height: 1.6;
-            position: relative;
-        }
-
-        /* Animated Background */
-        body::before {
-            content: '';
-            position: fixed;
-            top: -80%;
-            left: -80%;
-            width: 260%;
-            height: 260%;
-            background:
-                /* Lite tier - Green (5 orbs) */
-                radial-gradient(ellipse 700px 550px at 15% 25%, rgba(16, 185, 129, 0.32) 0%, rgba(16, 185, 129, 0.16) 30%, transparent 70%),
-                radial-gradient(ellipse 600px 500px at 45% 75%, rgba(16, 185, 129, 0.25) 0%, rgba(16, 185, 129, 0.12) 30%, transparent 70%),
-                radial-gradient(ellipse 550px 480px at 70% 40%, rgba(16, 185, 129, 0.28) 0%, rgba(16, 185, 129, 0.14) 30%, transparent 70%),
-                radial-gradient(ellipse 480px 520px at 30% 55%, rgba(16, 185, 129, 0.24) 0%, rgba(16, 185, 129, 0.11) 30%, transparent 70%),
-                radial-gradient(ellipse 520px 450px at 60% 90%, rgba(16, 185, 129, 0.26) 0%, rgba(16, 185, 129, 0.13) 30%, transparent 70%),
-
-                /* Pro tier - Blue (5 orbs) */
-                radial-gradient(ellipse 800px 650px at 75% 65%, rgba(92, 163, 255, 0.35) 0%, rgba(92, 163, 255, 0.18) 30%, transparent 70%),
-                radial-gradient(ellipse 650px 600px at 25% 85%, rgba(92, 163, 255, 0.28) 0%, rgba(92, 163, 255, 0.14) 30%, transparent 70%),
-                radial-gradient(ellipse 580px 550px at 50% 35%, rgba(92, 163, 255, 0.3) 0%, rgba(92, 163, 255, 0.15) 30%, transparent 70%),
-                radial-gradient(ellipse 620px 580px at 10% 60%, rgba(92, 163, 255, 0.26) 0%, rgba(92, 163, 255, 0.13) 30%, transparent 70%),
-                radial-gradient(ellipse 550px 600px at 85% 45%, rgba(92, 163, 255, 0.29) 0%, rgba(92, 163, 255, 0.14) 30%, transparent 70%),
-
-                /* Ultimate tier - Purple (5 orbs) */
-                radial-gradient(ellipse 750px 700px at 85% 15%, rgba(168, 85, 247, 0.3) 0%, rgba(168, 85, 247, 0.15) 30%, transparent 70%),
-                radial-gradient(ellipse 550px 650px at 90% 50%, rgba(168, 85, 247, 0.26) 0%, rgba(168, 85, 247, 0.13) 30%, transparent 70%),
-                radial-gradient(ellipse 600px 580px at 35% 20%, rgba(168, 85, 247, 0.28) 0%, rgba(168, 85, 247, 0.14) 30%, transparent 70%),
-                radial-gradient(ellipse 520px 600px at 65% 78%, rgba(168, 85, 247, 0.25) 0%, rgba(168, 85, 247, 0.12) 30%, transparent 70%),
-                radial-gradient(ellipse 580px 540px at 18% 48%, rgba(168, 85, 247, 0.27) 0%, rgba(168, 85, 247, 0.13) 30%, transparent 70%),
-
-                /* Accent - Orange (2 orbs) */
-                radial-gradient(ellipse 500px 550px at 55% 10%, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0.1) 30%, transparent 70%),
-                radial-gradient(ellipse 480px 520px at 42% 62%, rgba(245, 158, 11, 0.2) 0%, rgba(245, 158, 11, 0.09) 30%, transparent 70%);
-            animation: moveBackground 35s ease-in-out infinite;
-            z-index: 0;
-            pointer-events: none;
-            filter: blur(40px);
-        }
-
-        @keyframes moveBackground {
-            0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
-            25% { transform: translate(6%, -8%) rotate(90deg) scale(1.05); }
-            50% { transform: translate(8%, 5%) rotate(180deg) scale(1.08); }
-            75% { transform: translate(-7%, 6%) rotate(270deg) scale(1.04); }
-        }
-
-        nav, section, footer {
-            position: relative;
-            z-index: 1;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(10, 10, 11, 0.8);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(92, 163, 255, 0.1);
-            padding: 1rem 2rem;
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-nav {
-            height: 35px;
-            width: auto;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-link {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            font-size: 15px;
-        }
-
-        .nav-link:hover {
-            color: white;
-        }
-
-        .cta-button {
-            padding: 12px 28px;
-            background: linear-gradient(135deg, rgba(92, 163, 255, 0.9), rgba(125, 184, 255, 0.9));
-            border-radius: 12px;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(92, 163, 255, 0.2);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(92, 163, 255, 0.4);
-        }
-
-        /* Hero */
-        .hero {
+        /* Privacy Page Specific Styles */
+        .privacy-hero {
             min-height: 40vh;
             display: flex;
             align-items: center;
@@ -155,21 +26,21 @@
             text-align: center;
         }
 
-        .hero-content h1 {
+        .privacy-hero h1 {
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 1rem;
             line-height: 1.3;
         }
 
-        .subtitle {
+        .privacy-hero .subtitle {
             display: block;
             font-size: 0.75em;
             opacity: 0.9;
             margin-top: 0.8rem;
         }
 
-        .hero-content p {
+        .privacy-hero p {
             font-size: 1.2rem;
             color: rgba(255, 255, 255, 0.7);
             max-width: 700px;
@@ -192,12 +63,12 @@
             margin-bottom: 2rem;
         }
 
-        .section-header {
+        .policy-section-header {
             text-align: center;
             margin-bottom: 2rem;
         }
 
-        .section-header h2 {
+        .policy-section-header h2 {
             font-size: 2rem;
             color: var(--primary-light);
             margin-bottom: 0.5rem;
@@ -209,6 +80,7 @@
             gap: 3rem;
             margin-bottom: 2rem;
             align-items: start;
+            direction: ltr;
         }
 
         .arabic-column {
@@ -306,27 +178,8 @@
             grid-column: 1 / -1;
         }
 
-        /* Footer */
-        footer {
-            background: rgba(10, 10, 11, 0.9);
-            border-top: 1px solid rgba(92, 163, 255, 0.1);
-            padding: 2rem;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        footer a {
-            color: rgba(255, 255, 255, 0.6);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: var(--primary-light);
-        }
-
         /* Responsive */
-        @media (max-width: 968px) {
+        @media (max-width: 768px) {
             .two-column {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -344,53 +197,117 @@
                 padding-left: 0;
             }
 
-            .hero-content h1 {
+            .privacy-hero h1 {
                 font-size: 2rem;
+            }
+
+            .privacy-hero p {
+                font-size: 1rem;
             }
 
             .policy-box {
                 padding: 2rem 1.5rem;
             }
 
-            .nav-links {
-                display: none;
+            .two-column h3 {
+                font-size: 1.2rem;
+            }
+
+            .two-column p {
+                font-size: 0.95rem;
+            }
+
+            .privacy-hero {
+                padding: 120px 1.5rem 60px;
+            }
+
+            .content-section {
+                padding: 40px 1.5rem 80px;
+            }
+
+            .policy-section-header h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .privacy-hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .privacy-hero p {
+                font-size: 0.9rem;
+            }
+
+            .policy-box {
+                padding: 1.5rem 1rem;
+            }
+
+            .two-column h3 {
+                font-size: 1.1rem;
+            }
+
+            .two-column p {
+                font-size: 0.9rem;
+            }
+
+            .policy-section-header h2 {
+                font-size: 1.4rem;
+            }
+
+            .highlight-box {
+                padding: 1.5rem 1rem;
+            }
+
+            .definitions-box {
+                padding: 1.5rem 1rem;
             }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
+    <nav class="nav" id="navbar">
         <div class="nav-container">
-            <img src="BRIEFIK بريفك.svg" alt="BRIEFIK Logo" class="logo-nav">
+            <a href="index.html" class="nav-logo">
+                <img src="BRIEFIK بريفك.svg" alt="BRIEFIK بريفك">
+            </a>
             <div class="nav-links">
-                <a href="index.html" class="nav-link">Home | الرئيسية</a>
-                <a href="pricing.html" class="nav-link">Pricing | الأسعار</a>
-                <a href="privacy.html" class="nav-link">Privacy | الخصوصية</a>
-                <a href="terms.html" class="nav-link">Terms | الشروط</a>
-                <a href="index.html#download" class="cta-button">Download | تحميل</a>
+                <a href="index.html">الرئيسية | Home</a>
+                <a href="index.html#features">المميزات | Features</a>
+                <a href="index.html#pricing">الأسعار | Pricing</a>
+                <a href="index.html#download" class="btn-nav">تحميل | Download</a>
             </div>
+            <button class="nav-mobile-btn" onclick="toggleMobileMenu()" aria-label="القائمة">☰</button>
         </div>
     </nav>
 
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileMenu">
+        <a href="index.html" onclick="toggleMobileMenu()">الرئيسية | Home</a>
+        <a href="index.html#features" onclick="toggleMobileMenu()">المميزات | Features</a>
+        <a href="index.html#pricing" onclick="toggleMobileMenu()">الأسعار | Pricing</a>
+        <a href="index.html#download" class="btn-primary" onclick="toggleMobileMenu()">تحميل | Download</a>
+    </div>
+
     <!-- Hero -->
-    <section class="hero">
+    <section class="privacy-hero">
         <div class="hero-content">
             <h1>
                 Privacy Policy
                 <span class="subtitle">سياسة الخصوصية</span>
             </h1>
-            <p>Effective Date: October 14, 2025 | تاريخ السريان: ١٤ أكتوبر ٢٠٢٥</p>
+            <p dir="ltr">Effective Date: October 14, 2025 | تاريخ السريان: 14 أكتوبر 2025</p>
         </div>
     </section>
 
     <!-- Content -->
     <section class="content-section">
         <div class="policy-box">
-            <div class="section-header">
-                <h2>BRIEFIK Privacy Policy</h2>
-                <p style="color: rgba(255, 255, 255, 0.7);">
-                    How we collect, use, and protect your personal information
+            <div class="policy-section-header">
+                <h2>BRIEFIK Privacy Policy | سياسة خصوصية بريفك</h2>
+                <p style="color: rgba(255, 255, 255, 0.7);" dir="ltr">
+                    How we collect, use, and protect your personal information | كيف نجمع ونستخدم ونحمي معلوماتك الشخصية
                 </p>
             </div>
 
@@ -427,10 +344,10 @@
                     </ul>
 
                     <p><strong>We Are NOT Responsible:</strong></p>
-                    <p>We have NO liability for how you obtain content or whether you have proper permissions. For full details on liability and user responsibilities, please see our Terms of Service.</p>
+                    <p>We have NO liability for how you obtain content or whether you have proper permissions. For full details on liability and user responsibilities, please see our <a href="terms.html" style="color: var(--primary-light); text-decoration: underline;">Terms of Service</a>.</p>
                 </div>
                 <div class="arabic-column">
-                    <h3>١. غرض الخدمة ومسؤولية المستخدم</h3>
+                    <h3>1. غرض الخدمة ومسؤولية المستخدم</h3>
 
                     <p><strong>بريفك هو أداة للتلخيص.</strong> نوفر خدمات تلخيص مدعومة بالذكاء الاصطناعي لمساعدتك في استخراج الأفكار من محتواك.</p>
 
@@ -444,7 +361,7 @@
                     </ul>
 
                     <p><strong>نحن لسنا مسؤولين:</strong></p>
-                    <p>ليس لدينا أي مسؤولية عن كيفية حصولك على المحتوى أو ما إذا كان لديك الأذونات المناسبة. للحصول على التفاصيل الكاملة حول المسؤولية ومسؤوليات المستخدم، يرجى الاطلاع على شروط الخدمة الخاصة بنا.</p>
+                    <p>ليس لدينا أي مسؤولية عن كيفية حصولك على المحتوى أو ما إذا كان لديك الأذونات المناسبة. للحصول على التفاصيل الكاملة حول المسؤولية ومسؤوليات المستخدم، يرجى الاطلاع على <a href="terms.html" style="color: var(--primary-light); text-decoration: underline;">شروط الخدمة</a> الخاصة بنا.</p>
                 </div>
             </div>
 
@@ -459,7 +376,7 @@
                     </p>
                 </div>
                 <div class="arabic-column">
-                    <h3>٢. مقدمة</h3>
+                    <h3>2. مقدمة</h3>
                     <p>
                         تشرح سياسة الخصوصية هذه كيفية قيام بريفك ("نحن") بجمع واستخدام وحماية ومشاركة المعلومات الشخصية للمستخدم ("أنت" أو "المستخدم") عند استخدام تطبيق سطح المكتب والخدمات ذات الصلة ("الخدمة").
                     </p>
@@ -467,18 +384,6 @@
                         باستخدام الخدمة، يوافق المستخدم على جمع واستخدام المعلومات وفقاً لهذه السياسة.
                     </p>
                 </div>
-            </div>
-
-            <div class="highlight-box">
-                    <h4>Privacy-First Commitment | التزامنا بالخصوصية أولاً</h4>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem;">
-                        <div style="text-align: left; direction: ltr;">
-                            <p style="margin: 0;">We do not store any user files on our servers. All user data is automatically deleted immediately after processing.</p>
-                        </div>
-                        <div style="text-align: right; direction: rtl;">
-                            <p style="margin: 0;">لا نقوم بتخزين أي ملفات مستخدم على خوادمنا. يتم حذف جميع بيانات المستخدم تلقائياً فور المعالجة.</p>
-                        </div>
-                    </div>
             </div>
 
             <div class="two-column">
@@ -502,42 +407,42 @@
                     <p><strong>3.3 User Content and Summaries:</strong></p>
                     <ul>
                         <li>User content is processed via our API</li>
-                        <li>All uploaded files are deleted immediately after processing</li>
-                        <li>We do not retain any user files on our servers</li>
-                        <li>Summaries are stored locally on User's device only</li>
+                        <li>All meeting audio files are deleted immediately after processing</li>
+                        <li>We do not retain any meeting audio files on our servers</li>
+                        <li>Summaries are stored in the cloud for cross-device consistency</li>
                     </ul>
                 </div>
 
                 <div class="arabic-column">
-                    <h3>٣. المعلومات التي نجمعها</h3>
+                    <h3>3. المعلومات التي نجمعها</h3>
 
-                    <p><strong>٣.١ معلومات الحساب:</strong></p>
+                    <p><strong>3.1 معلومات الحساب:</strong></p>
                     <ul>
                         <li>عنوان البريد الإلكتروني للمستخدم (للمصادقة)</li>
                         <li>اسم المستخدم (اختياري)</li>
                         <li>معلومات الاشتراك والفوترة</li>
                     </ul>
 
-                    <p><strong>٣.٢ بيانات الاستخدام:</strong></p>
+                    <p><strong>3.2 بيانات الاستخدام:</strong></p>
                     <ul>
                         <li>مدة جلسات المستخدم ووقتها</li>
                         <li>إعدادات التطبيق وتفضيلات المستخدم</li>
                         <li>بيانات الاستخدام المجمعة والمجهولة</li>
                     </ul>
 
-                    <p><strong>٣.٣ محتوى المستخدم والملخصات:</strong></p>
+                    <p><strong>3.3 محتوى المستخدم والملخصات:</strong></p>
                     <ul>
                         <li>تتم معالجة محتوى المستخدم عبر واجهة برمجة التطبيقات الخاصة بنا</li>
-                        <li>يتم حذف جميع الملفات المرفوعة فوراً بعد المعالجة</li>
-                        <li>لا نحتفظ بأي ملفات مستخدم على خوادمنا</li>
-                        <li>يتم تخزين الملخصات محلياً على جهاز المستخدم فقط</li>
+                        <li>يتم حذف جميع ملفات صوت الاجتماعات فوراً بعد المعالجة</li>
+                        <li>لا نحتفظ بأي ملفات صوت اجتماعات على خوادمنا</li>
+                        <li>يتم تخزين الملخصات في السحابة لضمان الاتساق عبر الأجهزة</li>
                     </ul>
                 </div>
             </div>
 
             <div class="two-column">
                 <div class="english-column">
-                    <h3>4. How we Uses User Information</h3>
+                    <h3>4. How We Use User Information</h3>
                     <p>We use collected information for the following purposes:</p>
                     <ul>
                         <li>To provide and operate the Service for User</li>
@@ -551,7 +456,7 @@
                 </div>
 
                 <div class="arabic-column">
-                    <h3>٤. كيف نستخدم معلومات المستخدم</h3>
+                    <h3>4. كيف نستخدم معلومات المستخدم</h3>
                     <p>نستخدم المعلومات التي تم جمعها للأغراض التالية:</p>
                     <ul>
                         <li>تقديم وتشغيل الخدمة للمستخدم</li>
@@ -572,29 +477,29 @@
                     <p><strong>5.1 Encryption:</strong></p>
                     <p>We use industry-standard encryption to protect User's sensitive data in transit and at rest.</p>
 
-                    <p><strong>5.2 Local Storage:</strong></p>
-                    <p>User's summaries and processing results are stored locally on User's device only. User has full control over this data.</p>
+                    <p><strong>5.2 Cloud Storage:</strong></p>
+                    <p>User's summaries and processing results are stored in the cloud to ensure consistency across devices. However, meeting audio files are never saved or stored - they are processed and immediately deleted.</p>
 
                     <p><strong>5.3 Automatic Deletion:</strong></p>
-                    <p>All User content files are automatically and immediately deleted upon completion of processing.</p>
+                    <p>We do not store, listen to, or retain any meeting recordings. All audio files are automatically and immediately deleted upon completion of processing. Only the generated summary is saved in the cloud for user history.</p>
 
                     <p><strong>5.4 Limited Access:</strong></p>
                     <p>Access to User's personal information is limited to authorized personnel only.</p>
                 </div>
 
                 <div class="arabic-column">
-                    <h3>٥. حماية البيانات والأمان</h3>
+                    <h3>5. حماية البيانات والأمان</h3>
 
-                    <p><strong>٥.١ التشفير:</strong></p>
+                    <p><strong>5.1 التشفير:</strong></p>
                     <p>نستخدم التشفير القياسي في الصناعة لحماية البيانات الحساسة للمستخدم أثناء النقل والتخزين.</p>
 
-                    <p><strong>٥.٢ التخزين المحلي:</strong></p>
-                    <p>يتم تخزين ملخصات ونتائج معالجة المستخدم محلياً على جهاز المستخدم فقط. لدى المستخدم السيطرة الكاملة على هذه البيانات.</p>
+                    <p><strong>5.2 التخزين السحابي:</strong></p>
+                    <p>يتم تخزين ملخصات ونتائج معالجة المستخدم في السحابة لضمان الاتساق عبر الأجهزة. ومع ذلك، لا يتم حفظ أو تخزين ملفات صوت الاجتماعات أبداً - تتم معالجتها وحذفها فوراً.</p>
 
-                    <p><strong>٥.٣ الحذف التلقائي:</strong></p>
-                    <p>يتم حذف جميع ملفات محتوى المستخدم تلقائياً وفوراً بعد اكتمال المعالجة.</p>
+                    <p><strong>5.3 الحذف التلقائي:</strong></p>
+                    <p>لا نقوم بتخزين أو الاستماع إلى أو الاحتفاظ بأي تسجيلات اجتماعات. يتم حذف جميع ملفات الصوت تلقائياً وفوراً بعد اكتمال المعالجة. يتم حفظ الملخص المُنشأ فقط في السحابة لسجل المستخدم.</p>
 
-                    <p><strong>٥.٤ الوصول المحدود:</strong></p>
+                    <p><strong>5.4 الوصول المحدود:</strong></p>
                     <p>يقتصر الوصول إلى معلومات المستخدم الشخصية على الموظفين المصرح لهم فقط.</p>
                 </div>
             </div>
@@ -617,10 +522,10 @@
                 </div>
 
                 <div class="arabic-column">
-                    <h3>٦. مشاركة المعلومات مع أطراف ثالثة</h3>
+                    <h3>6. مشاركة المعلومات مع أطراف ثالثة</h3>
                     <p>لا نبيع أو نؤجر معلومات المستخدم الشخصية. قد نشارك المعلومات مع أطراف ثالثة فقط في الحالات التالية:</p>
 
-                    <p><strong>٦.١ مقدمو الخدمات:</strong></p>
+                    <p><strong>6.1 مقدمو الخدمات:</strong></p>
                     <ul>
                         <li>مزودي خدمات المعالجة بالذكاء الاصطناعي لإنشاء الملخصات من محتوى المستخدم</li>
                         <li>مزودي خدمات المصادقة وقاعدة البيانات</li>
@@ -628,120 +533,174 @@
                         <li>مزودي البنية التحتية السحابية والاستضافة</li>
                     </ul>
 
-                    <p><strong>٦.٢ الامتثال القانوني:</strong></p>
+                    <p><strong>6.2 الامتثال القانوني:</strong></p>
                     <p>قد نكشف عن معلومات المستخدم عند الطلب بموجب القانون أو لحماية حقوقنا والمستخدمين الآخرين.</p>
                 </div>
             </div>
 
             <div class="two-column">
                 <div class="english-column">
-                    <h3>6. User Rights</h3>
+                    <h3>7. User Rights</h3>
                     <p>User has the right to:</p>
                     <ul>
                         <li><strong>Access:</strong> Request a copy of their personal data</li>
                         <li><strong>Correction:</strong> Request correction of inaccurate information</li>
                         <li><strong>Deletion:</strong> Request deletion of their account and all associated data</li>
-                        <li><strong>Export:</strong> Export their data in standard formats</li>
                         <li><strong>Opt-out:</strong> From marketing emails</li>
                     </ul>
-                    <p>To exercise these rights, User may contact us at: <strong>privacy@briefik.com</strong></p>
+                    <p>To exercise these rights, User may contact us at: <strong>support@briefik.com</strong></p>
                 </div>
 
                 <div class="arabic-column">
-                    <h3>٦. حقوق المستخدم</h3>
+                    <h3>7. حقوق المستخدم</h3>
                     <p>يحق للمستخدم:</p>
                     <ul>
                         <li><strong>الوصول:</strong> طلب نسخة من بياناته الشخصية</li>
                         <li><strong>التصحيح:</strong> طلب تصحيح المعلومات غير الدقيقة</li>
                         <li><strong>الحذف:</strong> طلب حذف حسابه وجميع البيانات المرتبطة</li>
-                        <li><strong>التصدير:</strong> تصدير بياناته بتنسيقات قياسية</li>
                         <li><strong>إلغاء الاشتراك:</strong> من رسائل البريد الإلكتروني التسويقية</li>
                     </ul>
-                    <p>لممارسة هذه الحقوق، يمكن للمستخدم الاتصال بنا على: <strong>privacy@briefik.com</strong></p>
+                    <p>لممارسة هذه الحقوق، يمكن للمستخدم الاتصال بنا على: <strong>support@briefik.com</strong></p>
                 </div>
             </div>
 
             <div class="two-column">
                 <div class="english-column">
-                    <h3>7. Data Retention</h3>
+                    <h3>8. Data Retention</h3>
                     <ul>
                         <li><strong>Account Information:</strong> Retained while User's account is active</li>
                         <li><strong>Usage Data:</strong> Retained for 12 months</li>
-                        <li><strong>User Content Files:</strong> Deleted immediately (not retained)</li>
-                        <li><strong>Summaries:</strong> Stored locally on User's device only</li>
+                        <li><strong>Summaries:</strong> Stored in the cloud for cross-device access</li>
                     </ul>
                 </div>
 
                 <div class="arabic-column">
-                    <h3>٧. الاحتفاظ بالبيانات</h3>
+                    <h3>8. الاحتفاظ بالبيانات</h3>
                     <ul>
                         <li><strong>معلومات الحساب:</strong> نحتفظ بها طالما حساب المستخدم نشط</li>
-                        <li><strong>بيانات الاستخدام:</strong> نحتفظ بها لمدة 12 شهراً</li>
-                        <li><strong>ملفات محتوى المستخدم:</strong> تحذف فوراً (لا نحتفظ بها)</li>
-                        <li><strong>الملخصات:</strong> مخزنة محلياً على جهاز المستخدم فقط</li>
+                        <li><strong>بيانات الاستخدام:</strong> نحتفظ بها لمدة 12 شهرا</li>
+                        <li><strong>الملخصات:</strong> مخزنة في السحابة للوصول عبر الأجهزة</li>
                     </ul>
                 </div>
             </div>
 
             <div class="two-column">
                 <div class="english-column">
-                    <h3>8. Children's Privacy</h3>
+                    <h3>9. Children's Privacy</h3>
                     <p>The Service is not intended for children under 13 years of age. We do not knowingly collect personal information from children under this age. If we learn we have collected information from a child under 13, we will take steps to delete such information.</p>
                 </div>
 
                 <div class="arabic-column">
-                    <h3>٨. خصوصية الأطفال</h3>
-                    <p>الخدمة غير مخصصة للأطفال دون سن 13 عاماً. لا نجمع عن قصد معلومات شخصية من الأطفال دون هذا السن. إذا علمنا أننا جمعنا معلومات من طفل دون سن 13 عاماً، سنتخذ خطوات لحذف هذه المعلومات.</p>
+                    <h3>9. خصوصية الأطفال</h3>
+                    <p>الخدمة غير مخصصة للأطفال دون سن 13 عاما. لا نجمع عن قصد معلومات شخصية من الأطفال دون هذا السن. إذا علمنا أننا جمعنا معلومات من طفل دون سن 13 عاما، سنتخذ خطوات لحذف هذه المعلومات.</p>
                 </div>
             </div>
 
             <div class="two-column">
                 <div class="english-column">
-                    <h3>9. Changes to This Policy</h3>
+                    <h3>10. Changes to This Policy</h3>
                     <p>We may update this Privacy Policy from time to time. We will notify User of any material changes by posting the new policy on this page and updating the "Effective Date." User's continued use of the Service after changes constitutes acceptance of the updated Policy.</p>
                 </div>
 
                 <div class="arabic-column">
-                    <h3>٩. التغييرات على هذه السياسة</h3>
+                    <h3>10. التغييرات على هذه السياسة</h3>
                     <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنقوم بإخطار المستخدم بأي تغييرات جوهرية عن طريق نشر السياسة الجديدة على هذه الصفحة وتحديث تاريخ "تاريخ السريان". يشكل استمرار المستخدم في استخدام الخدمة بعد التغييرات موافقته على السياسة المحدثة.</p>
                 </div>
             </div>
 
             <div class="two-column">
                 <div class="english-column">
-                    <h3>10. Contact Us</h3>
+                    <h3>11. Contact Us</h3>
                     <p>If User has any questions about this Privacy Policy, User may contact us at:</p>
-                    <p><strong>Email:</strong> privacy@briefik.com</p>
+                    <p><strong>Email:</strong> support@briefik.com</p>
                     <p><strong>Website:</strong> briefik.com</p>
                 </div>
 
                 <div class="arabic-column">
-                    <h3>١٠. الاتصال بنا</h3>
+                    <h3>11. الاتصال بنا</h3>
                     <p>إذا كان لدى المستخدم أي أسئلة حول سياسة الخصوصية هذه، يمكنه الاتصال بنا على:</p>
-                    <p><strong>البريد الإلكتروني:</strong> privacy@briefik.com</p>
+                    <p><strong>البريد الإلكتروني:</strong> support@briefik.com</p>
                     <p><strong>الموقع الإلكتروني:</strong> briefik.com</p>
                 </div>
             </div>
 
             <div class="last-updated">
                     <p><strong>Last Updated:</strong> October 14, 2025</p>
-                    <p><strong>آخر تحديث:</strong> ١٤ أكتوبر ٢٠٢٥</p>
+                    <p><strong>آخر تحديث:</strong> 14 أكتوبر 2025</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p style="margin-bottom: 0.8rem;">
-            © 2025 BRIEFIK. صُنع في السعودية بكل حب | Made in Saudi Arabia with ❤️
-        </p>
-        <p>
-            <a href="index.html">Home | الرئيسية</a> •
-            <a href="pricing.html">Pricing | الأسعار</a> •
-            <a href="privacy.html">Privacy | الخصوصية</a> •
-            <a href="terms.html">Terms | الشروط</a>
-        </p>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="BRIEFIK بريفك.svg" alt="BRIEFIK بريفك" class="footer-logo">
+                <div class="hero-saudi footer-saudi">
+                    <span class="saudi-ar">صُنع بفخر في السعودية</span>
+                    <span class="saudi-flag">🇸🇦</span>
+                    <span class="saudi-en">Proudly Made in Saudi Arabia</span>
+                </div>
+            </div>
+
+            <nav class="footer-nav">
+                <div class="footer-column">
+                    <h4>الخدمة | Service</h4>
+                    <a href="index.html#features">المميزات | Features</a>
+                    <a href="index.html#pricing">الأسعار | Pricing</a>
+                </div>
+                <div class="footer-column">
+                    <h4>قانوني | Legal</h4>
+                    <a href="privacy.html">الخصوصية | Privacy</a>
+                    <a href="terms.html">الشروط | Terms</a>
+                </div>
+                <div class="footer-column">
+                    <h4>التواصل | Contact</h4>
+                    <a href="mailto:support@briefik.com">support@briefik.com</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 BRIEFIK جميع الحقوق محفوظة | All rights reserved</p>
+        </div>
     </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.nav-mobile-btn');
+            if (mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                menuBtn.innerHTML = '☰';
+            } else {
+                mobileMenu.classList.add('active');
+                menuBtn.innerHTML = '✕';
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.nav-mobile-btn');
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target) && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                menuBtn.innerHTML = '☰';
+            }
+        });
+    </script>
+    <script src="liquid-ether.js"></script>
 </body>
 </html>

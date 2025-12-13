@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - BRIEFIK | شروط الخدمة - بريفك</title>
     <meta name="description" content="BRIEFIK Terms of Service - Usage rights, subscription terms, and legal agreements.">
-    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/codec-pro">
+    <!-- Font preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+
+    <!-- Codec Pro Font - Primary brand font -->
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/codec-pro?styles=36014,36015,36016,36017,36018,36019,36020,36021,36022,36023,36024,36025">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -35,51 +42,7 @@
             unicode-bidi: plaintext;
         }
 
-        /* Animated Background */
-        body::before {
-            content: '';
-            position: fixed;
-            top: -80%;
-            left: -80%;
-            width: 260%;
-            height: 260%;
-            background:
-                /* Lite tier - Green (5 orbs) */
-                radial-gradient(ellipse 700px 550px at 15% 25%, rgba(16, 185, 129, 0.32) 0%, rgba(16, 185, 129, 0.16) 30%, transparent 70%),
-                radial-gradient(ellipse 600px 500px at 45% 75%, rgba(16, 185, 129, 0.25) 0%, rgba(16, 185, 129, 0.12) 30%, transparent 70%),
-                radial-gradient(ellipse 550px 480px at 70% 40%, rgba(16, 185, 129, 0.28) 0%, rgba(16, 185, 129, 0.14) 30%, transparent 70%),
-                radial-gradient(ellipse 480px 520px at 30% 55%, rgba(16, 185, 129, 0.24) 0%, rgba(16, 185, 129, 0.11) 30%, transparent 70%),
-                radial-gradient(ellipse 520px 450px at 60% 90%, rgba(16, 185, 129, 0.26) 0%, rgba(16, 185, 129, 0.13) 30%, transparent 70%),
-
-                /* Pro tier - Blue (5 orbs) */
-                radial-gradient(ellipse 800px 650px at 75% 65%, rgba(92, 163, 255, 0.35) 0%, rgba(92, 163, 255, 0.18) 30%, transparent 70%),
-                radial-gradient(ellipse 650px 600px at 25% 85%, rgba(92, 163, 255, 0.28) 0%, rgba(92, 163, 255, 0.14) 30%, transparent 70%),
-                radial-gradient(ellipse 580px 550px at 50% 35%, rgba(92, 163, 255, 0.3) 0%, rgba(92, 163, 255, 0.15) 30%, transparent 70%),
-                radial-gradient(ellipse 620px 580px at 10% 60%, rgba(92, 163, 255, 0.26) 0%, rgba(92, 163, 255, 0.13) 30%, transparent 70%),
-                radial-gradient(ellipse 550px 600px at 85% 45%, rgba(92, 163, 255, 0.29) 0%, rgba(92, 163, 255, 0.14) 30%, transparent 70%),
-
-                /* Ultimate tier - Purple (5 orbs) */
-                radial-gradient(ellipse 750px 700px at 85% 15%, rgba(168, 85, 247, 0.3) 0%, rgba(168, 85, 247, 0.15) 30%, transparent 70%),
-                radial-gradient(ellipse 550px 650px at 90% 50%, rgba(168, 85, 247, 0.26) 0%, rgba(168, 85, 247, 0.13) 30%, transparent 70%),
-                radial-gradient(ellipse 600px 580px at 35% 20%, rgba(168, 85, 247, 0.28) 0%, rgba(168, 85, 247, 0.14) 30%, transparent 70%),
-                radial-gradient(ellipse 520px 600px at 65% 78%, rgba(168, 85, 247, 0.25) 0%, rgba(168, 85, 247, 0.12) 30%, transparent 70%),
-                radial-gradient(ellipse 580px 540px at 18% 48%, rgba(168, 85, 247, 0.27) 0%, rgba(168, 85, 247, 0.13) 30%, transparent 70%),
-
-                /* Accent - Orange (2 orbs) */
-                radial-gradient(ellipse 500px 550px at 55% 10%, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0.1) 30%, transparent 70%),
-                radial-gradient(ellipse 480px 520px at 42% 62%, rgba(245, 158, 11, 0.2) 0%, rgba(245, 158, 11, 0.09) 30%, transparent 70%);
-            animation: moveBackground 35s ease-in-out infinite;
-            z-index: 0;
-            pointer-events: none;
-            filter: blur(40px);
-        }
-
-        @keyframes moveBackground {
-            0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
-            25% { transform: translate(6%, -8%) rotate(90deg) scale(1.05); }
-            50% { transform: translate(8%, 5%) rotate(180deg) scale(1.08); }
-            75% { transform: translate(-7%, 6%) rotate(270deg) scale(1.04); }
-        }
+        /* Background handled by LiquidEther WebGL effect */
 
         nav, section, footer {
             position: relative;
@@ -88,65 +51,6 @@
 
         html {
             scroll-behavior: smooth;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(10, 10, 11, 0.8);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(92, 163, 255, 0.1);
-            padding: 1rem 2rem;
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-nav {
-            height: 35px;
-            width: auto;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-link {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            font-size: 15px;
-        }
-
-        .nav-link:hover {
-            color: white;
-        }
-
-        .cta-button {
-            padding: 12px 28px;
-            background: linear-gradient(135deg, rgba(92, 163, 255, 0.9), rgba(125, 184, 255, 0.9));
-            border-radius: 12px;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(92, 163, 255, 0.2);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(92, 163, 255, 0.4);
         }
 
         /* Hero */
@@ -182,7 +86,7 @@
 
         /* Content Section */
         .content-section {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 60px 2rem 100px;
         }
@@ -227,6 +131,7 @@
             gap: 3rem;
             margin-bottom: 2rem;
             align-items: start;
+            direction: ltr;
         }
 
         .arabic-column {
@@ -338,42 +243,39 @@
             margin-top: 3rem;
         }
 
-        /* Footer */
-        footer {
-            background: rgba(10, 10, 11, 0.9);
-            border-top: 1px solid rgba(92, 163, 255, 0.1);
-            padding: 2rem;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        footer a {
-            color: rgba(255, 255, 255, 0.6);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: var(--primary-light);
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             .hero-content h1 {
                 font-size: 2rem;
             }
 
+            .hero-content p {
+                font-size: 1rem;
+            }
+
             .terms-box {
                 padding: 2rem 1.5rem;
             }
 
-            .nav-links {
-                display: none;
+            .hero {
+                padding: 120px 1.5rem 60px;
+            }
+
+            .content-section {
+                padding: 40px 1.5rem 80px;
             }
 
             .two-column {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+            }
+
+            .two-column h3 {
+                font-size: 1.2rem;
+            }
+
+            .two-column p {
+                font-size: 0.95rem;
             }
 
             .arabic-column {
@@ -387,23 +289,82 @@
                 border-left: none;
                 padding-left: 0;
             }
+
+            .terms-box h2 {
+                font-size: 1.6rem;
+            }
+
+            /* Performance optimizations for mobile */
+            body::before {
+                filter: blur(30px);
+                will-change: transform;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+
+            .terms-box {
+                padding: 1.5rem 1rem;
+            }
+
+            .two-column h3 {
+                font-size: 1.1rem;
+            }
+
+            .two-column p {
+                font-size: 0.9rem;
+            }
+
+            .terms-box h2 {
+                font-size: 1.4rem;
+            }
+
+            .highlight-box {
+                padding: 1.5rem 1rem;
+            }
+
+            .warning-box {
+                padding: 1.5rem 1rem;
+            }
+
+            .definitions-box {
+                padding: 1.5rem 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
+    <nav class="nav" id="navbar">
         <div class="nav-container">
-            <img src="BRIEFIK بريفك.svg" alt="BRIEFIK Logo" class="logo-nav">
+            <a href="index.html" class="nav-logo">
+                <img src="BRIEFIK بريفك.svg" alt="BRIEFIK بريفك">
+            </a>
             <div class="nav-links">
-                <a href="index.html" class="nav-link">Home | الرئيسية</a>
-                <a href="pricing.html" class="nav-link">Pricing | الأسعار</a>
-                <a href="privacy.html" class="nav-link">Privacy | الخصوصية</a>
-                <a href="terms.html" class="nav-link">Terms | الشروط</a>
-                <a href="index.html#download" class="cta-button">Download | تحميل</a>
+                <a href="index.html">الرئيسية | Home</a>
+                <a href="index.html#features">المميزات | Features</a>
+                <a href="index.html#pricing">الأسعار | Pricing</a>
+                <a href="index.html#download" class="btn-nav">تحميل | Download</a>
             </div>
+            <button class="nav-mobile-btn" onclick="toggleMobileMenu()" aria-label="القائمة">☰</button>
         </div>
     </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileMenu">
+        <a href="index.html" onclick="toggleMobileMenu()">الرئيسية | Home</a>
+        <a href="index.html#features" onclick="toggleMobileMenu()">المميزات | Features</a>
+        <a href="index.html#pricing" onclick="toggleMobileMenu()">الأسعار | Pricing</a>
+        <a href="index.html#download" class="btn-primary" onclick="toggleMobileMenu()">تحميل | Download</a>
+    </div>
 
     <!-- Hero -->
     <section class="hero">
@@ -450,7 +411,7 @@
                     <p>By using BRIEFIK, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the App.</p>
                 </div>
                 <div class="arabic-column">
-                    <h3>١. الموافقة على الشروط</h3>
+                    <h3>1. الموافقة على الشروط</h3>
                     <p>باستخدام بريفك، فإنك توافق على الالتزام بشروط الخدمة هذه. إذا كنت لا توافق على هذه الشروط، يرجى عدم استخدام التطبيق.</p>
                 </div>
             </div>
@@ -460,7 +421,7 @@
                     <h3>2. Service Purpose and User Responsibility</h3>
                 </div>
                 <div class="arabic-column">
-                    <h3>٢. غرض الخدمة ومسؤولية المستخدم</h3>
+                    <h3>2. غرض الخدمة ومسؤولية المستخدم</h3>
                 </div>
             </div>
 
@@ -470,7 +431,7 @@
                     <p>BRIEFIK is a SUMMARY tool designed to help users process and organize content from their meetings, lectures, classes, and courses. BRIEFIK provides AI-powered summarization services for user-submitted content.</p>
                 </div>
                 <div class="arabic-column">
-                    <p><strong>٢.١ غرض الخدمة:</strong></p>
+                    <p><strong>2.1 غرض الخدمة:</strong></p>
                     <p>بريفك هي أداة تلخيص مصممة لمساعدة المستخدمين على معالجة وتنظيم المحتوى من اجتماعاتهم ومحاضراتهم ودروسهم ودوراتهم. توفر بريفك خدمات تلخيص مدعومة بالذكاء الاصطناعي للمحتوى المقدم من المستخدمين.</p>
                 </div>
             </div>
@@ -489,7 +450,7 @@
                     </ul>
                 </div>
                 <div class="arabic-column">
-                    <p><strong>٢.٢ مسؤولية المستخدم عن المحتوى:</strong></p>
+                    <p><strong>2.2 مسؤولية المستخدم عن المحتوى:</strong></p>
                     <p><strong>أنت مسؤول بالكامل وحصرياً عن:</strong></p>
                     <ul>
                         <li>المحتوى الذي تقدمه إلى بريفك للمعالجة</li>
@@ -516,7 +477,7 @@
                     </ul>
                 </div>
                 <div class="arabic-column">
-                    <p><strong>٢.٣ عدم المسؤولية عن إجراءات المستخدم:</strong></p>
+                    <p><strong>2.3 عدم المسؤولية عن إجراءات المستخدم:</strong></p>
                     <p><strong>نحن لسنا مسؤولين عن:</strong></p>
                     <ul>
                         <li>كيفية استخدامك للخدمة أو أي محتوى تقوم بمعالجته</li>
@@ -541,7 +502,7 @@
                     </ul>
                 </div>
                 <div class="arabic-column">
-                    <p><strong>٢.٤ الاستخدام المقصود:</strong></p>
+                    <p><strong>2.4 الاستخدام المقصود:</strong></p>
                     <p>الخدمة مخصصة فقط للأغراض المشروعة مثل:</p>
                     <ul>
                         <li>تلخيص المحتوى من اجتماعاتك بالأذونات المناسبة</li>
@@ -565,7 +526,7 @@
                     </ul>
                 </div>
                 <div class="arabic-column">
-                    <p><strong>٢.٥ الاستخدامات المحظورة:</strong></p>
+                    <p><strong>2.5 الاستخدامات المحظورة:</strong></p>
                     <p>لا يجوز لك استخدام الخدمة من أجل:</p>
                     <ul>
                         <li>معالجة المحتوى دون أذونات مطلوبة من جميع الأطراف الضرورية</li>
@@ -591,7 +552,7 @@
                     <h3>3. License and Usage</h3>
                 </div>
                 <div class="arabic-column">
-                    <h3>٣. الترخيص والاستخدام</h3>
+                    <h3>3. الترخيص والاستخدام</h3>
                 </div>
             </div>
 
@@ -634,7 +595,7 @@
                     <h3>4. Subscriptions and Payments</h3>
                 </div>
                 <div class="arabic-column">
-                    <h3>٤. الاشتراكات والمدفوعات</h3>
+                    <h3>4. الاشتراكات والمدفوعات</h3>
                 </div>
             </div>
 
@@ -653,34 +614,41 @@
                 <div class="english-column">
                     <p><strong>Payment:</strong></p>
                     <ul>
-                        <li>Subscription fees are charged upfront for the chosen period (monthly or annually)</li>
+                        <li>Subscription fees are charged monthly via secure payment processing</li>
                         <li>All prices are in Saudi Riyal (SAR)</li>
-                        <li>Payment is via secure license keys</li>
+                        <li>Subscriptions automatically renew each billing period unless cancelled</li>
                         <li>You must provide accurate and up-to-date payment information</li>
+                        <li>Enterprise customers may purchase license keys in bulk - contact us for details</li>
                     </ul>
                 </div>
                 <div class="arabic-column">
                     <p><strong>الدفع:</strong></p>
                     <ul>
-                        <li>يتم تحصيل رسوم الاشتراك مقدماً للفترة المختارة (شهرياً أو سنوياً)</li>
+                        <li>يتم تحصيل رسوم الاشتراك شهرياً عبر معالجة الدفع الآمنة</li>
                         <li>جميع الأسعار بالريال السعودي (SAR)</li>
-                        <li>يتم الدفع عبر مفاتيح الترخيص الآمنة</li>
+                        <li>يتم تجديد الاشتراكات تلقائياً في كل فترة فوترة ما لم يتم الإلغاء</li>
                         <li>يجب عليك تقديم معلومات دفع صحيحة ومحدثة</li>
+                        <li>يمكن لعملاء المؤسسات شراء مفاتيح الترخيص بالجملة - اتصل بنا للتفاصيل</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="warning-box">
-                <p style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.8rem; text-align: center;">
-                    سياسة عدم الاسترداد | NO REFUND POLICY
-                </p>
-                <div class="two-column">
-                    <div class="english-column">
-                        <p style="font-weight: 500;">All payments are final and non-refundable. We do not offer refunds on paid subscriptions.</p>
-                    </div>
-                    <div class="arabic-column">
-                        <p style="font-weight: 500;">جميع المدفوعات نهائية وغير قابلة للاسترداد. لا نقدم استرداد أموال على الاشتراكات المدفوعة.</p>
-                    </div>
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>Refund Policy:</strong></p>
+                    <ul>
+                        <li>All payments are final and non-refundable</li>
+                        <li>We do not offer refunds on paid subscriptions under any circumstances</li>
+                        <li>By completing a purchase, you acknowledge and accept this no-refund policy</li>
+                    </ul>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>سياسة الاسترداد:</strong></p>
+                    <ul>
+                        <li>جميع المدفوعات نهائية وغير قابلة للاسترداد</li>
+                        <li>لا نقدم استرداد أموال على الاشتراكات المدفوعة تحت أي ظرف</li>
+                        <li>بإتمام عملية الشراء، فإنك تقر وتقبل سياسة عدم الاسترداد هذه</li>
+                    </ul>
                 </div>
             </div>
 
@@ -689,7 +657,7 @@
                     <h3>5. Cancellation and Renewal</h3>
                 </div>
                 <div class="arabic-column">
-                    <h3>٥. الإلغاء والتجديد</h3>
+                    <h3>5. الإلغاء والتجديد</h3>
                 </div>
             </div>
 
@@ -719,11 +687,11 @@
             <div class="two-column">
                 <div class="english-column">
                     <p><strong>Automatic Renewal:</strong></p>
-                    <p>BRIEFIK uses a license key system, so subscriptions do not automatically renew. When your subscription expires, you will need to purchase a new license key to continue using paid features.</p>
+                    <p>Subscriptions automatically renew at the end of each billing period (monthly) unless you cancel before the renewal date. You will be charged the then-current subscription rate. You can cancel auto-renewal at any time through the App settings or by contacting customer support.</p>
                 </div>
                 <div class="arabic-column">
                     <p><strong>التجديد التلقائي:</strong></p>
-                    <p>تستخدم بريفك نظام مفاتيح الترخيص، لذلك لا يتم تجديد الاشتراكات تلقائياً. عند انتهاء صلاحية اشتراكك، ستحتاج إلى شراء مفتاح ترخيص جديد لمواصلة استخدام الميزات المدفوعة.</p>
+                    <p>يتم تجديد الاشتراكات تلقائياً في نهاية كل فترة فوترة (شهرياً) ما لم تقم بالإلغاء قبل تاريخ التجديد. سيتم تحصيل سعر الاشتراك الحالي منك. يمكنك إلغاء التجديد التلقائي في أي وقت من خلال إعدادات التطبيق أو عن طريق الاتصال بدعم العملاء.</p>
                 </div>
             </div>
 
@@ -732,7 +700,7 @@
                     <h3>6. Usage Limits</h3>
                 </div>
                 <div class="arabic-column">
-                    <h3>٦. حدود الاستخدام</h3>
+                    <h3>6. حدود الاستخدام</h3>
                 </div>
             </div>
 
@@ -740,7 +708,7 @@
                 <div class="english-column">
                     <p>Each subscription plan has specific limits:</p>
                     <ul>
-                        <li><strong>Free:</strong> 3 hours monthly, 1 hour per session</li>
+                        <li><strong>Free:</strong> 30 minutes monthly, 30 minutes per session</li>
                         <li><strong>Lite:</strong> 15 hours monthly, 1.5 hours per session</li>
                         <li><strong>Pro:</strong> 50 hours monthly, 3 hours per session</li>
                         <li><strong>Ultimate:</strong> Unlimited usage, 6 hours per session</li>
@@ -749,7 +717,7 @@
                 <div class="arabic-column">
                     <p>كل خطة اشتراك لها حدود محددة:</p>
                     <ul>
-                        <li><strong>مجاني:</strong> 3 ساعات شهرياً، ساعة واحدة لكل جلسة</li>
+                        <li><strong>مجاني:</strong> 30 دقيقة شهرياً، 30 دقيقة لكل جلسة</li>
                         <li><strong>لايت:</strong> 15 ساعة شهرياً، ساعة ونصف لكل جلسة</li>
                         <li><strong>برو:</strong> 50 ساعة شهرياً، 3 ساعات لكل جلسة</li>
                         <li><strong>ألتميت:</strong> استخدام غير محدود، 6 ساعات لكل جلسة</li>
@@ -771,7 +739,7 @@
                     <h3>7. Intellectual Property</h3>
                 </div>
                 <div class="arabic-column">
-                    <h3>٧. الملكية الفكرية</h3>
+                    <h3>7. الملكية الفكرية</h3>
                 </div>
             </div>
 
@@ -797,70 +765,67 @@
                 </div>
             </div>
 
-            <div class="warning-box">
-                <div class="two-column">
-                    <div class="english-column">
-                        <h3>8. No Liability - Summary Service Only</h3>
-                    </div>
-                    <div class="arabic-column">
-                        <h3>٨. عدم المسؤولية - خدمة تلخيص فقط</h3>
-                    </div>
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>8. No Liability - Summary Service Only</h3>
                 </div>
-
-                <div class="two-column">
-                    <div class="english-column">
-                        <p><strong style="font-size: 1.2rem;">BRIEFIK CANNOT BE SUED. WE ARE ONLY A SUMMARY SERVICE.</strong></p>
-                    </div>
-                    <div class="arabic-column">
-                        <p><strong style="font-size: 1.2rem;">لا يمكن مقاضاة بريفك. نحن مجرد خدمة تلخيص.</strong></p>
-                    </div>
+                <div class="arabic-column">
+                    <h3>8. عدم المسؤولية - خدمة تلخيص فقط</h3>
                 </div>
+            </div>
 
-                <div class="two-column">
-                    <div class="english-column">
-                        <p><strong>YOU Alone Are Responsible:</strong></p>
-                        <p>By using this Service, you acknowledge and agree that:</p>
-                        <ul>
-                            <li><strong>BRIEFIK is ONLY a summary tool</strong> - We provide summarization technology only and do not participate in how you obtain or create your content</li>
-                            <li><strong>YOU are 100% responsible</strong> for your own content and how you obtain it</li>
-                            <li><strong>YOU are 100% responsible</strong> for obtaining all permissions before processing any content</li>
-                            <li><strong>BRIEFIK has ZERO involvement</strong> in how you create or obtain your content files</li>
-                            <li><strong>BRIEFIK has ZERO liability</strong> for your actions, content, or permission failures</li>
-                        </ul>
-                    </div>
-                    <div class="arabic-column">
-                        <p><strong>أنت وحدك المسؤول:</strong></p>
-                        <p>باستخدام هذه الخدمة، فإنك تقر وتوافق على أن:</p>
-                        <ul>
-                            <li><strong>بريفك هي فقط أداة تلخيص</strong> - نحن نوفر تقنية التلخيص فقط ولا نشارك في كيفية حصولك على محتواك أو إنشائه</li>
-                            <li><strong>أنت مسؤول بنسبة 100٪</strong> عن محتواك الخاص وكيفية حصولك عليه</li>
-                            <li><strong>أنت مسؤول بنسبة 100٪</strong> عن الحصول على جميع الأذونات قبل معالجة أي محتوى</li>
-                            <li><strong>بريفك ليس لها أي تدخل</strong> في كيفية إنشاءك أو حصولك على ملفات المحتوى الخاصة بك</li>
-                            <li><strong>بريفك ليس لها أي مسؤولية</strong> عن أفعالك أو محتواك أو فشلك في الحصول على الأذونات</li>
-                        </ul>
-                    </div>
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW, YOU WAIVE ANY CLAIMS AGAINST BRIEFIK. WE ARE ONLY A SUMMARY SERVICE.</strong></p>
                 </div>
+                <div class="arabic-column">
+                    <p><strong>إلى أقصى حد يسمح به القانون، تتنازل عن أي مطالبات ضد بريفك. نحن مجرد خدمة تلخيص.</strong></p>
+                </div>
+            </div>
 
-                <div class="two-column">
-                    <div class="english-column">
-                        <p><strong>You Cannot Sue BRIEFIK:</strong></p>
-                        <p>You expressly agree and acknowledge that:</p>
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>YOU Alone Are Responsible:</strong></p>
+                    <p>By using this Service, you acknowledge and agree that:</p>
+                    <ul>
+                        <li><strong>BRIEFIK is ONLY a summary tool</strong> - We provide summarization technology only and do not participate in how you obtain or create your content</li>
+                        <li><strong>YOU are 100% responsible</strong> for your own content and how you obtain it</li>
+                        <li><strong>YOU are 100% responsible</strong> for obtaining all permissions before processing any content</li>
+                        <li><strong>BRIEFIK has ZERO involvement</strong> in how you create or obtain your content files</li>
+                        <li><strong>BRIEFIK has ZERO liability</strong> for your actions, content, or permission failures</li>
+                    </ul>
+                </div>
+                <div class="arabic-column">
+                    <p><strong>أنت وحدك المسؤول:</strong></p>
+                    <p>باستخدام هذه الخدمة، فإنك تقر وتوافق على أن:</p>
+                    <ul>
+                        <li><strong>بريفك هي فقط أداة تلخيص</strong> - نحن نوفر تقنية التلخيص فقط ولا نشارك في كيفية حصولك على محتواك أو إنشائه</li>
+                        <li><strong>أنت مسؤول بنسبة 100٪</strong> عن محتواك الخاص وكيفية حصولك عليه</li>
+                        <li><strong>أنت مسؤول بنسبة 100٪</strong> عن الحصول على جميع الأذونات قبل معالجة أي محتوى</li>
+                        <li><strong>بريفك ليس لها أي تدخل</strong> في كيفية إنشاءك أو حصولك على ملفات المحتوى الخاصة بك</li>
+                        <li><strong>بريفك ليس لها أي مسؤولية</strong> عن أفعالك أو محتواك أو فشلك في الحصول على الأذونات</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>Waiver of Claims Against BRIEFIK:</strong></p>
+                        <p>To the maximum extent permitted by applicable law, you expressly agree and acknowledge that:</p>
                         <ul>
-                            <li>BRIEFIK cannot be named in any lawsuit related to your content or usage</li>
+                            <li>You waive any right to name BRIEFIK in any lawsuit related to your content or usage</li>
                             <li>BRIEFIK is not a party to any disputes arising from your content</li>
                             <li>You waive any and all rights to bring legal action against BRIEFIK</li>
-                            <li>Any attempt to sue BRIEFIK for matters related to your content is baseless and will be dismissed</li>
                             <li>We provide a technology tool only - we are not involved in your content creation activities</li>
                         </ul>
                     </div>
                     <div class="arabic-column">
-                        <p><strong>لا يمكنك مقاضاة بريفك:</strong></p>
-                        <p>أنت توافق وتقر صراحةً بأن:</p>
+                        <p><strong>التنازل عن المطالبات ضد بريفك:</strong></p>
+                        <p>إلى أقصى حد يسمح به القانون المعمول به، أنت توافق وتقر صراحةً بأن:</p>
                         <ul>
-                            <li>لا يمكن إدراج بريفك في أي دعوى قضائية تتعلق بمحتواك أو استخدامك</li>
+                            <li>تتنازل عن أي حق في إدراج بريفك في أي دعوى قضائية تتعلق بمحتواك أو استخدامك</li>
                             <li>بريفك ليست طرفاً في أي نزاعات ناشئة عن محتواك</li>
                             <li>تتنازل عن أي وجميع الحقوق في رفع دعوى قانونية ضد بريفك</li>
-                            <li>أي محاولة لمقاضاة بريفك بشأن مسائل تتعلق بمحتواك لا أساس لها وسيتم رفضها</li>
                             <li>نحن نوفر أداة تقنية فقط - نحن لسنا مشاركين في أنشطة إنشاء المحتوى الخاصة بك</li>
                         </ul>
                     </div>
@@ -895,21 +860,19 @@
                     </div>
                     <div class="arabic-column">
                         <p><strong style="font-size: 1.1rem;">بريفك هي مزود تقنية محايد. نحن لسنا مسؤولين عن إجراءات المستخدمين. لا يمكن تحميلنا المسؤولية عن كيفية حصول المستخدمين على محتواهم أو استخدامه.</strong></p>
-                    </div>
                 </div>
             </div>
 
-            <div class="warning-box">
-                <div class="two-column">
-                    <div class="english-column">
-                        <h3>9. AI Accuracy Disclaimer</h3>
-                    </div>
-                    <div class="arabic-column">
-                        <h3>٩. إخلاء المسؤولية عن دقة الذكاء الاصطناعي</h3>
-                    </div>
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>9. AI Accuracy Disclaimer</h3>
                 </div>
+                <div class="arabic-column">
+                    <h3>9. إخلاء المسؤولية عن دقة الذكاء الاصطناعي</h3>
+                </div>
+            </div>
 
-                <div class="two-column">
+            <div class="two-column">
                     <div class="english-column">
                         <p><strong>AI-Powered Summarization:</strong></p>
                         <p>BRIEFIK uses artificial intelligence (AI) technology to process and summarize user content. While we strive to provide accurate summaries, AI technology is not perfect and may produce errors, inaccuracies, or omissions.</p>
@@ -1022,21 +985,19 @@
                         <p><strong>باستخدام هذه الخدمة، فإنك تقر بأن تلخيص الذكاء الاصطناعي هو أداة مساعدة فقط وأنك ستتحقق بشكل مستقل من جميع المعلومات المهمة.</strong></p>
                     </div>
                 </div>
+
+            <div class="two-column">
+                <div class="english-column">
+                    <h3>10. Complete Limitation of Liability</h3>
+                </div>
+                <div class="arabic-column">
+                    <h3>10. الحد الكامل من المسؤولية</h3>
+                </div>
             </div>
 
-            <div class="warning-box">
-                <div class="two-column">
-                    <div class="english-column">
-                        <h3>10. Complete Limitation of Liability</h3>
-                    </div>
-                    <div class="arabic-column">
-                        <h3>١٠. الحد الكامل من المسؤولية</h3>
-                    </div>
-                </div>
-
-                <div class="two-column">
-                    <div class="english-column">
-                        <p><strong>Service Provided "AS IS":</strong></p>
+            <div class="two-column">
+                <div class="english-column">
+                    <p><strong>Service Provided "AS IS":</strong></p>
                         <p>BRIEFIK is provided "AS IS" and "AS AVAILABLE" with ALL FAULTS and without warranties of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not guarantee that the App will be error-free, uninterrupted, secure, or meet your requirements.</p>
                     </div>
                     <div class="arabic-column">
@@ -1151,27 +1112,16 @@
                     </div>
                     <div class="arabic-column">
                         <p><strong>باستخدام هذه الخدمة، فإنك توافق على أنك لن تحاول تحميلنا المسؤولية أو مقاضاتنا أو إشراكنا في أي إجراءات قانونية تتعلق باستخدامك للخدمة. أنت تتنازل عن أي حق في المطالبة بتعويضات منا.</strong></p>
-                    </div>
                 </div>
             </div>
 
-            <div class="highlight-box">
-                <div class="two-column">
-                    <div class="english-column">
-                        <p style="font-size: 1rem; font-weight: 500;">Our maximum liability to you shall not exceed the amount you paid for your subscription in the past 12 months.</p>
-                    </div>
-                    <div class="arabic-column">
-                        <p style="font-size: 1rem; font-weight: 500;">الحد الأقصى لمسؤوليتنا تجاهك لن يتجاوز المبلغ الذي دفعته لاشتراكك خلال الـ 12 شهراً الماضية.</p>
-                    </div>
-                </div>
-            </div>
 
             <div class="two-column">
                 <div class="english-column">
                     <h3>11. Privacy and Data Protection</h3>
                 </div>
                 <div class="arabic-column">
-                    <h3>١١. الخصوصية وحماية البيانات</h3>
+                    <h3>11. الخصوصية وحماية البيانات</h3>
                 </div>
             </div>
 
@@ -1189,7 +1139,7 @@
                     <p><strong>Key Points:</strong></p>
                     <ul>
                         <li>All user content files are deleted immediately after processing</li>
-                        <li>Summaries are stored locally on your device only</li>
+                        <li>Summaries are stored in the cloud for cross-device access</li>
                         <li>We do not sell or share your personal data</li>
                     </ul>
                 </div>
@@ -1197,7 +1147,7 @@
                     <p><strong>النقاط الرئيسية:</strong></p>
                     <ul>
                         <li>يتم حذف جميع ملفات محتوى المستخدم فوراً بعد المعالجة</li>
-                        <li>يتم تخزين الملخصات محلياً على جهازك فقط</li>
+                        <li>يتم تخزين الملخصات في السحابة للوصول عبر الأجهزة</li>
                         <li>لا نبيع أو نشارك بياناتك الشخصية</li>
                     </ul>
                 </div>
@@ -1208,7 +1158,7 @@
                     <h3>12. Third-Party Services and Force Majeure</h3>
                 </div>
                 <div class="arabic-column">
-                    <h3>١٢. خدمات الطرف الثالث والقوة القاهرة</h3>
+                    <h3>12. خدمات الطرف الثالث والقوة القاهرة</h3>
                 </div>
             </div>
 
@@ -1341,7 +1291,7 @@
                     </ul>
                 </div>
                 <div class="arabic-column">
-                    <h3>١٣. إنهاء الخدمة</h3>
+                    <h3>13. إنهاء الخدمة</h3>
 
                     <p>نحتفظ بالحق في تعليق أو إنهاء وصولك إلى بريفك في أي وقت، لأي سبب، بما في ذلك:</p>
                     <ul>
@@ -1360,7 +1310,7 @@
                     <p>We may update these Terms of Service from time to time. We will notify you of any material changes via email or through the App. Your continued use of BRIEFIK after changes constitutes acceptance of the new Terms.</p>
                 </div>
                 <div class="arabic-column">
-                    <h3>١٤. التغييرات على الشروط</h3>
+                    <h3>14. التغييرات على الشروط</h3>
 
                     <p>قد نقوم بتحديث شروط الخدمة هذه من وقت لآخر. سنقوم بإخطارك بأي تغييرات جوهرية عن طريق البريد الإلكتروني أو من خلال التطبيق. استمرارك في استخدام بريفك بعد التغييرات يشكل قبولك للشروط الجديدة.</p>
                 </div>
@@ -1375,7 +1325,7 @@
                     <p>The invalidity, illegality, or unenforceability of any provision shall not affect the validity, legality, or enforceability of the remaining provisions, which shall remain in full force and effect.</p>
                 </div>
                 <div class="arabic-column">
-                    <h3>١٥. القابلية للفصل</h3>
+                    <h3>15. القابلية للفصل</h3>
 
                     <p>إذا تبين أن أي بند من هذه الشروط غير صالح أو غير قانوني أو غير قابل للتنفيذ من قبل محكمة مختصة، فيجب تعديل هذا البند إلى الحد الأدنى اللازم لجعله صالحاً وقابلاً للتنفيذ، أو إذا لم يكن هذا التعديل ممكناً، فيجب فصله من هذه الشروط.</p>
 
@@ -1392,7 +1342,7 @@
                     <p>No failure or delay by us in exercising any right or remedy under these Terms shall operate as a waiver of that right or remedy. No single or partial exercise of any right or remedy shall preclude any other or further exercise of that right or remedy.</p>
                 </div>
                 <div class="arabic-column">
-                    <h3>١٦. الاتفاقية الكاملة</h3>
+                    <h3>16. الاتفاقية الكاملة</h3>
 
                     <p>تشكل شروط الخدمة هذه، مع سياسة الخصوصية الخاصة بنا، الاتفاقية الكاملة بينك وبين بريفك فيما يتعلق باستخدامك للخدمة وتحل محل جميع التفاهمات والاتفاقيات والتمثيلات والضمانات السابقة أو المعاصرة، سواء كانت مكتوبة أو شفهية، فيما يتعلق بالخدمة.</p>
 
@@ -1407,7 +1357,7 @@
                     <p>These Terms shall be governed by and construed in accordance with the laws of the Kingdom of Saudi Arabia. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts of Saudi Arabia.</p>
                 </div>
                 <div class="arabic-column">
-                    <h3>١٧. القانون الحاكم</h3>
+                    <h3>17. القانون الحاكم</h3>
 
                     <p>تخضع هذه الشروط وتفسر وفقاً لقوانين المملكة العربية السعودية. أي نزاعات ناشئة عن هذه الشروط ستخضع للاختصاص القضائي الحصري لمحاكم المملكة العربية السعودية.</p>
                 </div>
@@ -1424,7 +1374,7 @@
                     </ul>
                 </div>
                 <div class="arabic-column">
-                    <h3>١٨. اتصل بنا</h3>
+                    <h3>18. اتصل بنا</h3>
 
                     <p>إذا كان لديك أي أسئلة حول شروط الخدمة هذه، يرجى الاتصال بنا:</p>
                     <ul>
@@ -1505,11 +1455,11 @@
                 <div class="two-column" style="margin-top: 1.5rem;">
                     <div class="english-column">
                         <p><strong>Age Requirement:</strong></p>
-                        <p>You must be at least 18 years old to use this Service. By using BRIEFIK, you represent and warrant that you are 18 years of age or older, or if you are under 18, that you have obtained parental or guardian consent to use the Service and your parent/guardian agrees to be bound by these Terms on your behalf.</p>
+                        <p>You must be at least 13 years old to use this Service. By using BRIEFIK, you represent and warrant that you are 13 years of age or older. If you are under 18 but at least 13, you represent that you have obtained parental or guardian consent to use the Service and your parent/guardian agrees to be bound by these Terms on your behalf.</p>
                     </div>
                     <div class="arabic-column">
                         <p><strong>متطلبات العمر:</strong></p>
-                        <p>يجب أن يكون عمرك 18 عاماً على الأقل لاستخدام هذه الخدمة. باستخدام بريفك، فإنك تقر وتضمن أن عمرك 18 عاماً أو أكثر، أو إذا كنت أقل من 18 عاماً، فقد حصلت على موافقة الوالدين أو الوصي لاستخدام الخدمة وأن والدك/وصيك يوافق على الالتزام بهذه الشروط نيابة عنك.</p>
+                        <p>يجب أن يكون عمرك 13 عاماً على الأقل لاستخدام هذه الخدمة. باستخدام بريفك، فإنك تقر وتضمن أن عمرك 13 عاماً أو أكثر. إذا كنت أقل من 18 عاماً ولكن 13 عاماً على الأقل، فإنك تقر بأنك حصلت على موافقة الوالدين أو الوصي لاستخدام الخدمة وأن والدك/وصيك يوافق على الالتزام بهذه الشروط نيابة عنك.</p>
                     </div>
                 </div>
 
@@ -1525,23 +1475,81 @@
             </div>
 
             <div class="last-updated">
-                <p>آخر تحديث: ١٤ أكتوبر ٢٠٢٥</p>
+                <p>آخر تحديث: 14 أكتوبر 2025</p>
                 <p>Last Updated: October 14, 2025</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p style="margin-bottom: 0.8rem;">
-            © 2025 BRIEFIK. صُنع في السعودية بكل حب | Made in Saudi Arabia with ❤️
-        </p>
-        <p>
-            <a href="index.html">Home | الرئيسية</a> •
-            <a href="pricing.html">Pricing | الأسعار</a> •
-            <a href="privacy.html">Privacy | الخصوصية</a> •
-            <a href="terms.html">Terms | الشروط</a>
-        </p>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="BRIEFIK بريفك.svg" alt="BRIEFIK بريفك" class="footer-logo">
+                <div class="hero-saudi footer-saudi">
+                    <span class="saudi-ar">صُنع بفخر في السعودية</span>
+                    <span class="saudi-flag">🇸🇦</span>
+                    <span class="saudi-en">Proudly Made in Saudi Arabia</span>
+                </div>
+            </div>
+
+            <nav class="footer-nav">
+                <div class="footer-column">
+                    <h4>الخدمة | Service</h4>
+                    <a href="index.html#features">المميزات | Features</a>
+                    <a href="index.html#pricing">الأسعار | Pricing</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal | قانوني</h4>
+                    <a href="privacy.html">الخصوصية | Privacy</a>
+                    <a href="terms.html">الشروط | Terms</a>
+                </div>
+                <div class="footer-column">
+                    <h4>التواصل | Contact</h4>
+                    <a href="mailto:support@briefik.com">support@briefik.com</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 BRIEFIK جميع الحقوق محفوظة | All rights reserved</p>
+        </div>
     </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.nav-mobile-btn');
+            if (mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                menuBtn.innerHTML = '☰';
+            } else {
+                mobileMenu.classList.add('active');
+                menuBtn.innerHTML = '✕';
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.nav-mobile-btn');
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target) && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                menuBtn.innerHTML = '☰';
+            }
+        });
+    </script>
+    <script src="liquid-ether.js"></script>
 </body>
 </html>
