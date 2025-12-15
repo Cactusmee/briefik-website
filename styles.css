@@ -711,6 +711,7 @@ textarea {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-5);
+  direction: ltr;
 }
 
 .feature-card-main {
@@ -727,6 +728,7 @@ textarea {
   --mouse-x: 50%;
   --mouse-y: 50%;
   --spotlight-color: rgba(92, 163, 255, 0.15);
+  direction: rtl;
 }
 
 .feature-card-main .spotlight-overlay {
@@ -838,6 +840,7 @@ textarea {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-5);
+  direction: ltr;
 }
 
 .feature-card {
@@ -852,6 +855,7 @@ textarea {
   --mouse-x: 50%;
   --mouse-y: 50%;
   --spotlight-color: rgba(92, 163, 255, 0.12);
+  direction: rtl;
 }
 
 .feature-card .spotlight-overlay {
@@ -937,6 +941,7 @@ textarea {
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-5);
   align-items: stretch;
+  direction: ltr;
 }
 
 .pricing-card {
@@ -953,6 +958,7 @@ textarea {
   --mouse-x: 50%;
   --mouse-y: 50%;
   --spotlight-color: rgba(92, 163, 255, 0.1);
+  direction: rtl;
 }
 
 .pricing-card .spotlight-overlay {
@@ -1437,6 +1443,11 @@ textarea {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
+  direction: ltr;
+}
+
+.footer-column {
+  direction: rtl;
 }
 
 .footer-column h4 {

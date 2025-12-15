@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise - BRIEFIK | الأعمال - بريفك</title>
+    <meta name="description" content="BRIEFIK Enterprise - Bulk license keys and better pricing for companies. Boost your team's productivity.">
+
+    <!-- Font preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+
+    <!-- Codec Pro Font - Primary brand font -->
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/codec-pro?styles=36014,36015,36016,36017,36018,36019,36020,36021,36022,36023,36024,36025">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <style>
+        /* Enterprise Page Specific Styles */
+        .enterprise-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 150px 2rem 80px;
+            text-align: center;
+        }
+
+        .enterprise-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .enterprise-hero .subtitle {
+            display: block;
+            font-size: 0.75em;
+            opacity: 0.9;
+            margin-top: 0.8rem;
+        }
+
+        .enterprise-hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Content Section */
+        .content-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 2rem 100px;
+        }
+
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+            direction: ltr;
+        }
+
+        .benefit-card {
+            direction: rtl;
+            background: rgba(18, 18, 20, 0.6);
+            border: 1px solid rgba(92, 163, 255, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            border-color: rgba(92, 163, 255, 0.4);
+            transform: translateY(-4px);
+        }
+
+        .benefit-card .spotlight-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(
+                400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                rgba(92, 163, 255, 0.1),
+                transparent 40%
+            );
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .benefit-card:hover .spotlight-overlay {
+            opacity: 1;
+        }
+
+        .benefit-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(92, 163, 255, 0.2), rgba(92, 163, 255, 0.1));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefit-icon svg {
+            width: 28px;
+            height: 28px;
+            color: var(--primary-light);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .benefit-card .title-en {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 1rem;
+            display: block;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .benefit-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-card .desc-en {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.55);
+            line-height: 1.6;
+            direction: ltr;
+            text-align: left;
+        }
+
+        /* CTA Section */
+        .enterprise-cta {
+            background: linear-gradient(135deg, rgba(92, 163, 255, 0.12), rgba(125, 184, 255, 0.08));
+            border: 1px solid rgba(92, 163, 255, 0.25);
+            border-radius: 24px;
+            padding: 3rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .enterprise-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .enterprise-cta .cta-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .enterprise-cta .contact-box {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .enterprise-cta .email-label {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .enterprise-cta .email-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-light);
+            text-decoration: none;
+            padding: 1rem 2rem;
+            background: rgba(92, 163, 255, 0.15);
+            border: 1px solid rgba(92, 163, 255, 0.3);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            direction: ltr;
+        }
+
+        .enterprise-cta .email-link:hover {
+            background: rgba(92, 163, 255, 0.25);
+            border-color: rgba(92, 163, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .enterprise-cta .email-link svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .enterprise-hero h1 {
+                font-size: 2rem;
+            }
+
+            .enterprise-hero p {
+                font-size: 1rem;
+            }
+
+            .enterprise-hero {
+                padding: 120px 1.5rem 60px;
+            }
+
+            .content-section {
+                padding: 30px 1.5rem 80px;
+            }
+
+            .benefit-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .benefit-card h3 {
+                font-size: 1.25rem;
+            }
+
+            .enterprise-cta {
+                padding: 2rem 1.5rem;
+            }
+
+            .enterprise-cta h2 {
+                font-size: 1.6rem;
+            }
+
+            .enterprise-cta .email-link {
+                font-size: 1.1rem;
+                padding: 0.875rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .enterprise-hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .enterprise-hero p {
+                font-size: 0.9rem;
+            }
+
+            .benefit-card {
+                padding: 1.5rem 1.25rem;
+            }
+
+            .benefit-card h3 {
+                font-size: 1.15rem;
+            }
+
+            .benefit-card p {
+                font-size: 0.95rem;
+            }
+
+            .enterprise-cta {
+                padding: 1.75rem 1.25rem;
+            }
+
+            .enterprise-cta h2 {
+                font-size: 1.4rem;
+            }
+
+            .enterprise-cta .email-link {
+                font-size: 1rem;
+                padding: 0.75rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="BRIEFIK بريفك.svg" alt="BRIEFIK بريفك">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية | Home</a>
+                <a href="index.html#features">المميزات | Features</a>
+                <a href="index.html#pricing">الأسعار | Pricing</a>
+                <a href="enterprise.html">الأعمال | Enterprise</a>
+                <a href="index.html#download" class="btn-nav">تحميل | Download</a>
+            </div>
+            <button class="nav-mobile-btn" onclick="toggleMobileMenu()" aria-label="القائمة">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileMenu">
+        <a href="index.html" onclick="toggleMobileMenu()">الرئيسية | Home</a>
+        <a href="index.html#features" onclick="toggleMobileMenu()">المميزات | Features</a>
+        <a href="index.html#pricing" onclick="toggleMobileMenu()">الأسعار | Pricing</a>
+        <a href="enterprise.html" onclick="toggleMobileMenu()">الأعمال | Enterprise</a>
+        <a href="index.html#download" class="btn-primary" onclick="toggleMobileMenu()">تحميل | Download</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="enterprise-hero">
+        <div class="hero-content">
+            <h1>
+                الأعمال
+                <span class="subtitle">Enterprise</span>
+            </h1>
+            <p>حلول مؤسسية لزيادة إنتاجية فريقك</p>
+            <p dir="ltr" style="margin-top: 0.5rem;">Enterprise solutions to boost your team's productivity</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="content-section">
+        <!-- Benefits Grid -->
+        <div class="benefits-grid">
+            <!-- Empower Your Team -->
+            <div class="benefit-card">
+                <div class="spotlight-overlay"></div>
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <h3>مكّن فريقك</h3>
+                <span class="title-en">Empower Your Team</span>
+                <p>جهّز فريقك بأداة ذكية لتلخيص الاجتماعات والمحاضرات وزيادة كفاءة العمل</p>
+                <p class="desc-en">Equip your team with a smart tool to summarize meetings and lectures, boosting work efficiency</p>
+            </div>
+
+            <!-- Boost Productivity -->
+            <div class="benefit-card">
+                <div class="spotlight-overlay"></div>
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                </div>
+                <h3>زيادة الإنتاجية</h3>
+                <span class="title-en">Boost Productivity</span>
+                <p>ساعد موظفيك على توفير ساعات من وقتهم بتلخيص الاجتماعات تلقائياً</p>
+                <p class="desc-en">Help your employees save hours by automatically summarizing meetings</p>
+            </div>
+
+            <!-- Bulk Licenses -->
+            <div class="benefit-card">
+                <div class="spotlight-overlay"></div>
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                    </svg>
+                </div>
+                <h3>تراخيص جماعية</h3>
+                <span class="title-en">Bulk License Keys</span>
+                <p>احصل على مفاتيح تراخيص متعددة لجميع أفراد فريقك بإدارة مركزية سهلة</p>
+                <p class="desc-en">Get multiple license keys for your entire team with easy centralized management</p>
+            </div>
+
+            <!-- Better Pricing -->
+            <div class="benefit-card">
+                <div class="spotlight-overlay"></div>
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 1124.14 1256.39" fill="currentColor">
+                        <path d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"/>
+                        <path d="M1085.73,895.8c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.33v-135.2l292.27-62.11c20.06-44.47,33.32-92.75,38.4-143.37l-330.68,70.27V66.13c-50.67,28.45-95.67,66.32-132.25,110.99v403.35l-132.25,28.11V0c-50.67,28.44-95.67,66.32-132.25,110.99v525.69l-295.91,62.88c-20.06,44.47-33.33,92.75-38.42,143.37l334.33-71.05v170.26l-358.3,76.14c-20.06,44.47-33.32,92.75-38.4,143.37l375.04-79.7c30.53-6.35,56.77-24.4,73.83-49.24l68.78-101.97v-0.02c7.14-10.55,11.3-23.27,11.3-36.97v-149.98l132.25-28.11v270.4l424.53-90.28Z"/>
+                    </svg>
+                </div>
+                <h3>أسعار مميزة</h3>
+                <span class="title-en">Better Pricing</span>
+                <p>وفّر أكثر مع أسعار خاصة للشركات أفضل من الاشتراكات الفردية</p>
+                <p class="desc-en">Save more with special enterprise pricing, better than individual subscriptions</p>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="enterprise-cta">
+            <h2>تواصل معنا</h2>
+            <p class="cta-subtitle">Contact Us</p>
+            <div class="contact-box">
+                <span class="email-label">للاستفسارات والطلبات | For inquiries and requests</span>
+                <a href="mailto:business@briefik.com" class="email-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    business@briefik.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="BRIEFIK بريفك.svg" alt="BRIEFIK بريفك" class="footer-logo">
+                <div class="hero-saudi footer-saudi">
+                    <span class="saudi-ar">صُنع بفخر في السعودية</span>
+                    <span class="saudi-flag">🇸🇦</span>
+                    <span class="saudi-en">Proudly Made in Saudi Arabia</span>
+                </div>
+            </div>
+
+            <nav class="footer-nav">
+                <div class="footer-column">
+                    <h4>الخدمة | Service</h4>
+                    <a href="index.html#features">المميزات | Features</a>
+                    <a href="index.html#pricing">الأسعار | Pricing</a>
+                    <a href="enterprise.html">الأعمال | Enterprise</a>
+                </div>
+                <div class="footer-column">
+                    <h4>قانوني | Legal</h4>
+                    <a href="privacy.html">الخصوصية | Privacy</a>
+                    <a href="terms.html">الشروط | Terms</a>
+                </div>
+                <div class="footer-column">
+                    <h4>التواصل | Contact</h4>
+                    <a href="mailto:support@briefik.com">support@briefik.com</a>
+                    <a href="mailto:business@briefik.com">business@briefik.com</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 BRIEFIK جميع الحقوق محفوظة | All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.nav-mobile-btn');
+            if (mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                menuBtn.innerHTML = '☰';
+            } else {
+                mobileMenu.classList.add('active');
+                menuBtn.innerHTML = '✕';
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.nav-mobile-btn');
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target) && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                menuBtn.innerHTML = '☰';
+            }
+        });
+
+        // SpotlightCard effect - mouse tracking for benefit cards
+        const spotlightCards = document.querySelectorAll('.benefit-card');
+
+        spotlightCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+    <script src="liquid-ether.js"></script>
+</body>
+</html>
