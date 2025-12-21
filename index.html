@@ -576,30 +576,6 @@
             });
         });
 
-        // Fetch latest release from GitHub and update download buttons
-        (async function updateDownloadLinks() {
-            try {
-                const response = await fetch('https://api.github.com/repos/Cactusmee/briefik-website/releases/latest');
-                if (!response.ok) return;
-
-                const release = await response.json();
-
-                // Find the Windows installer (.exe with "Setup" in name)
-                const windowsAsset = release.assets.find(asset =>
-                    asset.name.endsWith('.exe') && asset.name.includes('Setup')
-                );
-
-                if (windowsAsset) {
-                    // Update all download buttons
-                    document.querySelectorAll('.download-btn').forEach(btn => {
-                        btn.href = windowsAsset.browser_download_url;
-                    });
-                }
-            } catch (error) {
-                // If fetch fails, buttons fall back to releases page (already set in href)
-                console.log('Using fallback download link');
-            }
-        })();
     </script>
     <script src="liquid-ether.js"></script>
 </body>
