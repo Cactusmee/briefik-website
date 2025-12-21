@@ -652,6 +652,12 @@ textarea {
   opacity: 0.8;
 }
 
+.coming-soon {
+  font-size: 0.75em;
+  opacity: 0.6;
+  font-weight: 400;
+}
+
 /* Hero Saudi Badge */
 .hero-saudi {
   display: inline-flex;
