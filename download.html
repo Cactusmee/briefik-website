@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحميل BRIEFIK | Download BRIEFIK</title>
+    <meta name="description" content="حمّل BRIEFIK الآن - مساعدك الذكي للاجتماعات والمحاضرات">
+
+    <!-- Font preconnect for faster loading -->
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+
+    <!-- Codec Pro Font - Primary brand font -->
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/codec-pro?styles=36014,36015,36016,36017,36018,36019,36020,36021,36022,36023,36024,36025">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <style>
+        .download-hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 120px 24px 60px;
+            text-align: center;
+        }
+
+        .download-status {
+            margin-bottom: 48px;
+        }
+
+        .download-title {
+            font-size: var(--font-h1);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .download-subtitle {
+            font-size: var(--font-xl);
+            color: var(--text-secondary);
+        }
+
+        /* Spinner Animation */
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(92, 163, 255, 0.2);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 32px auto;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .manual-download {
+            margin-top: 24px;
+            font-size: var(--font-base);
+            color: var(--text-muted);
+        }
+
+        .manual-download a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        /* Windows Notice Section */
+        .windows-notice {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        .notice-card {
+            background: linear-gradient(145deg, rgba(18, 18, 20, 0.8) 0%, rgba(10, 10, 11, 0.9) 100%);
+            border: 1px solid rgba(92, 163, 255, 0.15);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+        }
+
+        .notice-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .notice-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--primary);
+        }
+
+        .notice-title {
+            font-size: var(--font-h4);
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .notice-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            direction: ltr;
+        }
+
+        .notice-english {
+            text-align: left;
+            direction: ltr;
+        }
+
+        .notice-arabic {
+            text-align: right;
+            direction: rtl;
+        }
+
+        .notice-text {
+            font-size: var(--font-base);
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .notice-steps {
+            font-size: var(--font-base);
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .notice-certified {
+            font-size: var(--font-sm);
+            color: var(--primary-light);
+            margin-top: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .notice-content {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .download-title {
+                font-size: var(--font-h2);
+            }
+
+            .download-subtitle {
+                font-size: var(--font-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="BRIEFIK بريفك.svg" alt="BRIEFIK بريفك">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية | Home</a>
+                <a href="index.html#features">المميزات | Features</a>
+                <a href="index.html#pricing">الأسعار | Pricing</a>
+                <a href="enterprise.html">الأعمال | Enterprise</a>
+                <a href="index.html#download" class="btn-nav">تحميل | Download</a>
+            </div>
+            <button class="nav-mobile-btn" onclick="toggleMobileMenu()" aria-label="القائمة">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileMenu">
+        <a href="index.html" onclick="toggleMobileMenu()">الرئيسية | Home</a>
+        <a href="index.html#features" onclick="toggleMobileMenu()">المميزات | Features</a>
+        <a href="index.html#pricing" onclick="toggleMobileMenu()">الأسعار | Pricing</a>
+        <a href="enterprise.html" onclick="toggleMobileMenu()">الأعمال | Enterprise</a>
+        <a href="index.html#download" class="btn-primary" onclick="toggleMobileMenu()">تحميل | Download</a>
+    </div>
+
+    <!-- Download Hero -->
+    <section class="download-hero">
+        <div class="download-status">
+            <h1 class="download-title">سيبدأ التحميل قريباً</h1>
+            <p class="download-subtitle">Your download will start shortly</p>
+            <div class="spinner"></div>
+            <p class="manual-download">
+                لم يبدأ التحميل؟ <a href="#" id="manualDownload">اضغط هنا</a>
+                <br>
+                <span dir="ltr">Download not starting? <a href="#" id="manualDownloadEn">Click here</a></span>
+            </p>
+        </div>
+
+        <!-- Windows Notice -->
+        <div class="windows-notice">
+            <div class="notice-card">
+                <div class="notice-header">
+                    <svg class="notice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="16" x2="12" y2="12"/>
+                        <line x1="12" y1="8" x2="12.01" y2="8"/>
+                    </svg>
+                    <span class="notice-title">ملاحظة لمستخدمي ويندوز | Note for Windows Users</span>
+                </div>
+
+                <div class="notice-content">
+                    <div class="notice-english">
+                        <p class="notice-text">
+                            Windows may show a security prompt for new applications.
+                        </p>
+                        <p class="notice-steps">
+                            Simply click "More info" → "Run anyway"
+                        </p>
+                        <p class="notice-certified">
+                            ✓ BRIEFIK is certified and safe to install
+                        </p>
+                    </div>
+
+                    <div class="notice-arabic">
+                        <p class="notice-text">
+                            قد يظهر تنبيه أمان من ويندوز للتطبيقات الجديدة.
+                        </p>
+                        <p class="notice-steps">
+                            اضغط على "مزيد من المعلومات" ← "تشغيل على أي حال"
+                        </p>
+                        <p class="notice-certified">
+                            ✓ تطبيق BRIEFIK موثق وآمن للتثبيت
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="BRIEFIK بريفك.svg" alt="BRIEFIK بريفك" class="footer-logo">
+                <div class="hero-saudi footer-saudi">
+                    <span class="saudi-ar">صُنع بفخر في السعودية</span>
+                    <span class="saudi-flag">🇸🇦</span>
+                    <span class="saudi-en">Proudly Made in Saudi Arabia</span>
+                </div>
+            </div>
+
+            <nav class="footer-nav">
+                <div class="footer-column">
+                    <h4>الخدمة | Service</h4>
+                    <a href="index.html#features">المميزات | Features</a>
+                    <a href="index.html#pricing">الأسعار | Pricing</a>
+                    <a href="enterprise.html">الأعمال | Enterprise</a>
+                </div>
+                <div class="footer-column">
+                    <h4>قانوني | Legal</h4>
+                    <a href="privacy.html">الخصوصية | Privacy</a>
+                    <a href="terms.html">الشروط | Terms</a>
+                </div>
+                <div class="footer-column">
+                    <h4>التواصل | Contact</h4>
+                    <a href="mailto:support@briefik.com">support@briefik.com</a>
+                    <a href="mailto:business@briefik.com">business@briefik.com</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 BRIEFIK جميع الحقوق محفوظة | All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.nav-mobile-btn');
+            if (mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                menuBtn.innerHTML = '☰';
+            } else {
+                mobileMenu.classList.add('active');
+                menuBtn.innerHTML = '✕';
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.nav-mobile-btn');
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target) && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                menuBtn.innerHTML = '☰';
+            }
+        });
+
+        // Auto-download function
+        async function startDownload() {
+            try {
+                const response = await fetch('https://api.github.com/repos/Cactusmee/briefik-website/releases/latest');
+                if (!response.ok) throw new Error('API error');
+
+                const release = await response.json();
+                const asset = release.assets.find(a => a.name.endsWith('.exe') && a.name.includes('Setup'));
+
+                if (asset) {
+                    window.location.href = asset.browser_download_url;
+                    return asset.browser_download_url;
+                }
+            } catch (e) {
+                // Fallback to releases page
+                window.location.href = 'https://github.com/Cactusmee/briefik-website/releases/latest';
+                return 'https://github.com/Cactusmee/briefik-website/releases/latest';
+            }
+        }
+
+        // Start download after 1.5 seconds
+        window.addEventListener('load', function() {
+            setTimeout(startDownload, 1500);
+        });
+
+        // Manual download links
+        document.getElementById('manualDownload').addEventListener('click', function(e) {
+            e.preventDefault();
+            startDownload();
+        });
+
+        document.getElementById('manualDownloadEn').addEventListener('click', function(e) {
+            e.preventDefault();
+            startDownload();
+        });
+    </script>
+    <script src="liquid-ether.js"></script>
+</body>
+</html>
