@@ -2068,11 +2068,15 @@ textarea {
     overflow-wrap: break-word;
   }
 
-  /* Fix platforms section - stack vertically on mobile */
+  /* Fix platforms section - compact layout on mobile */
   .hero-platforms {
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
     gap: var(--space-2);
+    justify-content: center;
     align-items: center;
+    max-width: 320px;
+    margin: 0 auto var(--space-4);
   }
 
   .platform-dot {
@@ -2080,12 +2084,24 @@ textarea {
   }
 
   .platform-item {
-    font-size: var(--font-sm);
+    font-size: var(--font-xs);
+    background: rgba(92, 163, 255, 0.06);
+    padding: 5px 10px;
+    border-radius: 16px;
+    border: 1px solid rgba(92, 163, 255, 0.12);
+  }
+
+  /* Highlight Windows as the available platform */
+  .platform-item:first-of-type {
+    background: rgba(92, 163, 255, 0.15);
+    border-color: rgba(92, 163, 255, 0.3);
+    color: var(--text-primary);
   }
 
   .coming-soon {
-    display: block;
-    font-size: 0.7em;
+    font-size: 0.6em;
+    opacity: 0.5;
+    margin-left: 2px;
   }
 
   /* Fix Saudi badge for mobile */
