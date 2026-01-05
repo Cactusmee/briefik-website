@@ -1941,11 +1941,11 @@ textarea {
   .hero {
     padding: var(--space-8) var(--space-4);
     min-height: auto;
-    padding-top: 120px;
+    padding-top: 100px;
   }
 
   .hero-logo {
-    max-width: 450px;
+    max-width: 400px;
   }
 
   .hero-features {
@@ -1958,6 +1958,22 @@ textarea {
 
   .btn-hero-text {
     font-size: var(--font-base);
+  }
+
+  /* Fix platforms to wrap on tablet */
+  .hero-platforms {
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    max-width: 350px;
+    justify-content: center;
+  }
+
+  .platform-dot {
+    display: none;
+  }
+
+  .platform-item {
+    padding: var(--space-1) var(--space-2);
   }
 
   .features-main {
@@ -2009,17 +2025,74 @@ textarea {
     --font-h4: 1.25rem;
   }
 
+  /* Hide nav logo on mobile - hero has the main logo */
+  .nav-logo {
+    display: none;
+  }
+
+  /* Keep burger button on the right (flex-start because row-reverse) */
+  .nav-container {
+    justify-content: flex-start;
+  }
+
   .section {
     padding: var(--space-7) var(--space-4);
   }
 
   .hero {
     padding: var(--space-7) var(--space-4);
-    padding-top: 100px;
+    padding-top: 80px;
   }
 
   .hero-logo {
-    max-width: 320px;
+    max-width: 280px;
+    margin-bottom: var(--space-5);
+  }
+
+  /* Fix hero text to wrap properly */
+  .hero-headlines {
+    padding: 0 var(--space-2);
+  }
+
+  .hero-title {
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-base);
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Fix platforms section - stack vertically on mobile */
+  .hero-platforms {
+    flex-direction: column;
+    gap: var(--space-2);
+    align-items: center;
+  }
+
+  .platform-dot {
+    display: none;
+  }
+
+  .platform-item {
+    font-size: var(--font-sm);
+  }
+
+  .coming-soon {
+    display: block;
+    font-size: 0.7em;
+  }
+
+  /* Fix Saudi badge for mobile */
+  .hero-saudi {
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
   }
 
   .hero-features {
@@ -2062,5 +2135,56 @@ textarea {
   .pricing-card--pro {
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+}
+
+/* ==========================================================================
+   15. Mobile Navigation Improvements
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .mobile-nav {
+    top: 60px;
+    padding: var(--space-6) var(--space-5);
+    gap: var(--space-3);
+    background: rgba(5, 5, 7, 0.98);
+    border-bottom: 1px solid rgba(92, 163, 255, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .mobile-nav a {
+    padding: var(--space-4) var(--space-5);
+    font-size: var(--font-base);
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-nav a:hover,
+  .mobile-nav a:active {
+    background: rgba(92, 163, 255, 0.15);
+    border-color: rgba(92, 163, 255, 0.3);
+    color: var(--text-primary);
+  }
+
+  .mobile-nav .btn-primary {
+    margin-top: var(--space-3);
+    padding: var(--space-4) var(--space-5);
+    background: var(--primary);
+    border: none;
+  }
+
+  /* Better burger button styling */
+  .nav-mobile-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+  }
+
+  .nav-mobile-btn:hover,
+  .nav-mobile-btn:active {
+    background: rgba(92, 163, 255, 0.15);
   }
 }
